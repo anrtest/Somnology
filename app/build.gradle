@@ -40,6 +40,7 @@ dependencies {
     implementation 'de.halfbit:pinned-section-listview:1.0.0'
     implementation 'com.intuit.sdp:sdp-android:1.0.5'
 
+
     // Add Library
     implementation 'com.github.barteksc:android-pdf-viewer:2.3.0'
 //    implementation 'org.apache.co mmons:commons-io:1.3.2'
