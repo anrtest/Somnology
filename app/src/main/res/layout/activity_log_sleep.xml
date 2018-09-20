@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_2x"
+    tools:context=".LogSleep">
+
+    <RelativeLayout
+        android:id="@+id/logSleep_relativeLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <include
+            android:id="@+id/logSleep_Header"
+            layout="@layout/activity_header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <include
+            android:id="@+id/logSleepIncludeFooter"
+            layout="@layout/activity_bottom_navigation" />
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/logSleepIncludeFooter"
+            android:layout_below="@id/logSleep_Header"
+            android:background="@null">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/logSleep_Header">
+                <ImageView
+                    android:id="@+id/sleepLog_BedImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="370dp"
+                    android:background="@drawable/bedroom_bg_2"
+                    />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:orientation="horizontal"
+                    android:layout_alignBottom="@id/sleepLog_BedImage"
+                    android:paddingBottom="68dp">
+
+                    <ImageButton
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:background="@drawable/owl_icon_2x"
+                        android:gravity="center_horizontal|center"
+                        />
+
+
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/logSleep_alarmLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginLeft="30dp"
+                    android:weightSum="4">
+
+                    <Button
+                        android:layout_width="12dp"
+                        android:layout_height="55dp"
+                        android:layout_weight=".5"
+                        android:background="@drawable/sound_icon_2x"
+
+                        />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2.5" />
+
+                    <TextView
+                        android:id="@+id/logSleep_EditAlarm"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical|end"
+                        android:paddingEnd="15dp"
+                        android:text="@string/edit_alarm" />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/sleepLog_timeLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/logSleep_alarmLayout"
+                    android:padding="10dp"
+                    android:weightSum="5">
+
+                    <!--<View-->
+                        <!--android:layout_width="0dp"-->
+                        <!--android:layout_height="match_parent"-->
+                        <!--android:layout_weight="1" />-->
+
+                    <TextClock
+                        android:id="@+id/sleepLog_TimeDisplay"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="5"
+                        android:gravity="center_vertical|center"
+                        android:paddingRight="25dp"
+                        android:text="8:18"
+                        android:textSize="100sp" />
+
+                    <!--<TextView-->
+                        <!--android:id="@+id/sleepLog_TimeMeridian"-->
+                        <!--android:layout_width="0dp"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_weight="1"-->
+                        <!--android:gravity="bottom"-->
+                        <!--android:text="PM"-->
+                        <!--android:textSize="35sp" />-->
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_below="@id/sleepLog_BedImage"
+                    android:paddingTop="35dp">
+                    <Button
+                        android:id="@+id/sleepLog_gettingBedBtn"
+                        android:layout_width="370dp"
+                        android:layout_height="50dp"
+                        android:text="@string/sleepLog_getInBedText"
+                        android:textAllCaps="false"
+                        android:layout_gravity="center"
+                        android:background="@drawable/sleep_button_2x"
+                        />
+                    <Button
+                        android:id="@+id/sleepLog_LogSleepBtn"
+                        android:layout_width="370dp"
+                        android:layout_height="50dp"
+                        android:text="@string/sleepLog_LogSleepText"
+                        android:textAllCaps="false"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="35dp"
+                        android:background="@drawable/log_sleep_2x"
+                        />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+        </ScrollView>
+
+
+
+
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>

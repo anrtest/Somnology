@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Intro_complete_profile"
+    android:background="@drawable/intro_3_2x">
+
+    <ImageView
+        android:id="@+id/intro3_owlIcon"
+        android:layout_width="108dp"
+        android:layout_height="122dp"
+        android:layout_gravity="bottom"
+        android:layout_marginStart="-16dp"
+        android:layout_marginTop="74dp"
+        android:alpha="1"
+        android:adjustViewBounds="true"
+        android:background="@drawable/owl_icon_2x"
+        android:rotation="50"
+        android:scaleType="fitXY"
+        android:visibility="visible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/introSpeech3TxtView"
+        style="@style/introSpeech3Text"
+        android:layout_width="166dp"
+        android:layout_height="117dp"
+        android:alpha="0"
+        android:background="@drawable/speech_bubble_2x"
+        android:text="@string/intro3Text"
+        android:visibility="visible"
+        app:layout_constraintStart_toEndOf="@+id/intro3_owlIcon"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <Button
+        android:id="@+id/BtnInroCompleteProfileNext"
+        style="@style/OrangeButtonText"
+        android:layout_width="191dp"
+        android:layout_height="52dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginStart="4dp"
+        android:background="@drawable/rounded_button_orange_2x"
+
+        android:text="Next"
+        android:textAllCaps="false"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+
+
+</android.support.constraint.ConstraintLayout>

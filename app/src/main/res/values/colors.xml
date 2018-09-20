@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="settingsButtonColor">#00424E</color>
+    <color name="colorOrange">#ec664b</color>
+    <color name="colorWrongInfo">#ec664b</color>
+    <color name="colorBlack">#000000</color>
+    <color name="colorBlue">#0080ff</color>
+    <color name="colorWhite">#ffffff</color>
+    <color name="colorChartUnprogressed">#012f37</color>
+    <color name="appBlue">#1faebe</color>
+</resources>

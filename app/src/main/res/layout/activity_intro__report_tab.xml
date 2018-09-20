@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Intro_ReportTab"
+    android:background="@drawable/intro_2_2x">
+
+    <!--<RelativeLayout-->
+        <!--android:id="@+id/relativeIntro2"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:background="@drawable/intro_2_2x">-->
+        <!--<LinearLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:orientation="vertical"-->
+            <!--android:weightSum="1">-->
+            <!--<LinearLayout-->
+                <!--android:id="@+id/intro_pager2"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="0dp"-->
+                <!--android:layout_weight=".1"-->
+                <!--android:orientation="horizontal"-->
+                <!--android:gravity="center"-->
+                <!--android:background="@drawable/bg_2x">-->
+                <!--<Button-->
+                    <!--android:id="@+id/intro2Btn1"-->
+                    <!--style="@style/introSliders"-->
+                    <!--android:background="@drawable/pagecontrol_normal_2x"/>-->
+                <!--<Button-->
+                    <!--android:id="@+id/intro2Btn2"-->
+                    <!--style="@style/introSliders"-->
+                    <!--android:background="@drawable/pagecontrol_selected_2x"/>-->
+                <!--<Button-->
+                    <!--android:id="@+id/intro2Btn3"-->
+                    <!--style="@style/introSliders"-->
+                    <!--android:background="@drawable/pagecontrol_normal_2x"/>-->
+                <!--<Button-->
+                    <!--android:id="@+id/intro2Btn4"-->
+                    <!--style="@style/introSliders"-->
+                    <!--android:background="@drawable/pagecontrol_normal_2x"/>-->
+
+            <!--</LinearLayout>-->
+            <!--<LinearLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="0dp"-->
+                <!--android:layout_weight=".40"-->
+                <!--android:weightSum="2">-->
+                <!--<RelativeLayout-->
+                    <!--android:layout_width="0dp"-->
+                    <!--android:layout_weight=".3"-->
+                    <!--android:layout_height="match_parent">-->
+
+                <!--</RelativeLayout>-->
+
+    <TextView
+        android:id="@+id/introSpeech2TxtView"
+        style="@style/introSpeech2Text"
+        android:layout_width="166dip"
+        android:layout_height="117dip"
+        android:layout_marginEnd="24dp"
+        android:layout_marginTop="38dp"
+        android:layout_weight="1"
+        android:alpha="0"
+        android:background="@drawable/speech_bubble_reverse_2x"
+        android:text="@string/intro2Text"
+        android:visibility="visible"
+        app:layout_constraintEnd_toStartOf="@+id/intro2_owlIcon"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/intro2_owlIcon"
+        android:layout_width="108dp"
+        android:layout_height="104dp"
+        android:layout_marginTop="96dp"
+        android:adjustViewBounds="true"
+        android:background="@drawable/owl_180_2x"
+        android:scaleType="fitXY"
+        android:alpha="1"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+            <!--</LinearLayout>-->
+            <!--<RelativeLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="0dp"-->
+                <!--android:layout_weight=".60"-->
+                <!--android:background="@null"-->
+                <!--/>-->
+        <!--</LinearLayout>-->
+
+
+    <Button
+        android:id="@+id/BtnInroReportTabNext"
+        style="@style/OrangeButtonText"
+        android:layout_width="191dp"
+        android:layout_height="52dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginStart="4dp"
+        android:background="@drawable/rounded_button_orange_2x"
+
+        android:text="Next"
+        android:textAllCaps="false"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!--</RelativeLayout>-->
+
+
+
+</android.support.constraint.ConstraintLayout>

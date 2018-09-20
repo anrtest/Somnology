@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/background_light"
+    tools:context="com.carobar.somnology.webPage">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/wpIncludedHeader"
+        layout="@layout/activity_header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+
+
+    <WebView
+        android:id="@+id/wpWebView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/wpIncludedHeader"
+        android:layout_above="@id/webViewIncludeFooter"
+        android:layout_marginBottom="-20dp">
+
+    </WebView>
+    <include
+        android:id="@+id/webViewIncludeFooter"
+        layout="@layout/activity_bottom_navigation"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:visibility="gone"/>
+
+    <ProgressBar
+        android:id="@+id/webViewProgressbar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_centerVertical="true"/>
+
+    </RelativeLayout>
+
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SleepQuestions"
+    android:background="@drawable/background_2x">
+
+    <RelativeLayout
+        android:id="@+id/sleep_question_relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include
+            android:id="@+id/sleep_question_header"
+            layout="@layout/activity_header" />
+
+        <LinearLayout
+            android:id="@+id/sleepQuestion_completeStatus"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_below="@id/sleep_question_header"
+            android:layout_marginTop="5dp"
+            android:orientation="vertical"
+            android:weightSum="14">
+
+            <ProgressBar
+                android:id="@+id/sleepQuestion_progressBar"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="20dp"
+                android:indeterminate="false"
+                android:max="100"
+                android:minHeight="50dp"
+                android:minWidth="300dp"
+                android:progress="33"/>
+
+            <TextView
+                android:id="@+id/sleepQuestion_textView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/sleepQuestion_progressBar"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="42dp"
+                android:layout_marginLeft="150dp"
+                android:text="Text Here"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                />
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/Sleep_questions_linear"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_below="@id/sleepQuestion_completeStatus"
+            android:layout_marginTop="5dp"
+            android:orientation="vertical"
+            android:weightSum="14">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@android:color/black"/>
+
+        <Button
+            android:id="@+id/sleepQuestion_interview_questions"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_gravity="start"
+            android:layout_marginTop="2dp"
+            android:layout_weight="1"
+            android:background="@drawable/background_2x"
+            android:drawableRight="@drawable/next_arrow_2x"
+            android:padding="20dp"
+            android:text="Interview Questions"
+            android:textAlignment="viewStart"
+            android:textAllCaps="false" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@android:color/black"/>
+
+        <Button
+            android:id="@+id/sleepQuestion_stopBang"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_gravity="start"
+            android:layout_marginTop="2dp"
+            android:layout_weight="1"
+            android:background="@drawable/background_2x"
+            android:drawableRight="@drawable/next_arrow_2x"
+            android:padding="20dp"
+            android:text="Stop Bang"
+            android:textAlignment="viewStart"
+            android:textAllCaps="false" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@android:color/black"/>
+
+        <Button
+            android:id="@+id/sleepQuestion_epworthSleepinessScale"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_gravity="start"
+            android:layout_marginTop="2dp"
+            android:layout_weight="1"
+            android:background="@drawable/background_2x"
+            android:drawableRight="@drawable/next_arrow_2x"
+            android:padding="20dp"
+            android:text="Epworth Sleepiness Scale"
+            android:textAlignment="viewStart"
+            android:textAllCaps="false"
+            android:textSize="14sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@android:color/black"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/Sleep_questions_smallLogoFooter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@id/Sleep_questions_linear">
+            <ImageView
+                android:layout_width="150dp"
+                android:layout_height="200dp"
+                android:background="@drawable/logo_small"/>
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:background="@drawable/speech_bubble_2x"/>
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>

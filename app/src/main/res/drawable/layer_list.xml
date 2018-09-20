@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item>
+        <bitmap
+            android:layout_height="match_parent"
+            android:alpha="0.2"
+            android:gravity="fill"
+            android:src="@drawable/earth_rotation_2x">
+
+        </bitmap>
+    </item>
+
+</layer-list >

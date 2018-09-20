@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainIntro">
+    <LinearLayout
+        android:id="@+id/introMainPagerBtn"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:background="@drawable/bg_2x">
+        <Button
+            android:id="@+id/introMainBtn1"
+            style="@style/introSliders"
+            android:background="@drawable/pagecontrol_normal_2x"/>
+        <Button
+            android:id="@+id/introMainBtn2"
+            style="@style/introSliders"
+            android:background="@drawable/pagecontrol_normal_2x"/>
+        <Button
+            android:id="@+id/introMainBtn3"
+            style="@style/introSliders"
+            android:background="@drawable/pagecontrol_normal_2x"/>
+        <Button
+            android:id="@+id/introMainBtn4"
+            style="@style/introSliders"
+            android:background="@drawable/pagecontrol_normal_2x"/>
+
+    </LinearLayout>
+    <android.support.v4.view.ViewPager
+        android:id="@+id/introViewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/introMainPagerBtn">
+
+    </android.support.v4.view.ViewPager>
+
+</RelativeLayout>

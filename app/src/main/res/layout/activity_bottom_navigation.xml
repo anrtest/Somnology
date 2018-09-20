@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_alignParentBottom="true"
+    android:layout_gravity="bottom"
+    tools:context=".bottomNavigation">
+
+    <android.support.design.widget.BottomNavigationView
+        android:id="@+id/navigationView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+
+        android:background="#062a36"
+        app:itemIconTint="#fff"
+        app:itemTextColor="#fff"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/imageButtonMain"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/navigation">
+
+
+    </android.support.design.widget.BottomNavigationView>
+
+
+    <ImageButton
+        android:id="@+id/imageButtonMain"
+        android:layout_width="103dp"
+        android:layout_height="86dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:background="@drawable/tabbar_middle_button_2x"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <android.support.design.widget.BottomNavigationView
+        android:id="@+id/navigationViewRight"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+
+        android:layout_weight="1"
+        android:background="#062a36"
+        app:itemIconTint="#fff"
+        app:itemTextColor="#fff"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageButtonMain"
+        app:menu="@menu/navigation_right">
+
+    </android.support.design.widget.BottomNavigationView>
+
+    <!--<LinearLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="?attr/actionBarSize"-->
+        <!--android:background="#062a36"-->
+        <!--android:layout_alignParentBottom="true">-->
+
+
+
+
+        <!--<android.support.design.widget.FloatingActionButton-->
+            <!--android:id="@+id/floatingActionButton"-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="80dp"-->
+            <!--android:layout_weight="0.5"-->
+            <!--app:backgroundTint="#062a36"-->
+            <!--app:borderWidth="0dp"-->
+            <!--app:elevation="0dp"-->
+            <!--app:fabSize="mini"-->
+            <!--app:srcCompat="@drawable/middle_button_2x" />-->
+
+
+
+
+
+    <!--</LinearLayout>-->
+
+
+
+
+
+
+
+</android.support.constraint.ConstraintLayout>

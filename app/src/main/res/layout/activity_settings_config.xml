@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".settings_config"
+    android:background="@drawable/background_2x">
+    <RelativeLayout
+        android:id="@+id/settingsConfig"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+        <include
+            android:id="@+id/settingsConfig_header"
+            layout="@layout/activity_header" />
+        <include
+            android:id="@+id/settingsConfigIncludeFooter"
+            layout="@layout/activity_bottom_navigation"/>
+
+
+        <ScrollView
+            android:id="@+id/settingsConfig_ScrollView"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_above="@id/settingsConfigIncludeFooter"
+            android:layout_below="@id/settingsConfig_header"
+            android:gravity="center"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="56dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="15dp"
+                >
+
+                <Switch
+                    android:id="@+id/settingsConfig_bedtimeReminder"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Bedtime Reminder"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingTop="15dp"
+                    android:paddingBottom="15dp"
+                    android:weightSum="3">
+                    <TextView
+                        android:id="@+id/settingsConfig_BedtimeButtonText"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:layout_gravity="start"
+                        android:layout_marginTop="2dp"
+                        android:padding="5dp"
+                        android:text="Set Bedtime Reminder Time:"
+                        android:textAllCaps="false"
+                        android:textColor="@android:color/white"
+                        android:textStyle="bold" />
+                    <Button
+                        android:id="@+id/settingsConfig_BedtimeButton"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/set_time"
+                        android:padding="5dp"
+                        android:text="Set Time"
+
+                        />
+                </LinearLayout>
+
+                    <Switch
+                        android:id="@+id/settingsConfig_dailyReminder"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Daily Reminder to Log Sleep" />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingTop="15dp"
+                        android:paddingBottom="15dp"
+                        android:weightSum="3">
+                        <TextView
+                            android:id="@+id/settingsConfig_SleepLogBtnText"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:layout_gravity="start"
+                            android:layout_marginTop="2dp"
+                            android:padding="5dp"
+                            android:text="Sleep Log Reminder Time:"
+                            android:textAllCaps="false"
+                            android:textColor="@android:color/white"
+                            android:textStyle="bold" />
+                        <Button
+                            android:id="@+id/settingsConfig_SleepLogBtn"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@drawable/set_time"
+                            android:padding="5dp"
+                            android:text="3:00 AM"
+
+                            />
+                    </LinearLayout>
+            </LinearLayout>
+
+        </ScrollView>
+
+    </RelativeLayout>
+
+
+</android.support.constraint.ConstraintLayout>

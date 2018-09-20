@@ -1,0 +1,666 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".epworth_sleepiness"
+    android:background="@drawable/background_2x">
+
+    <RelativeLayout
+        android:id="@+id/epworth_RelativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <include
+            android:id="@+id/epworthSleepiness_Header"
+            layout="@layout/activity_header"
+            />
+
+        <ScrollView
+            android:id="@+id/epworthSleepiness_ScrollView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/epworthSleepiness_Header"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:fillViewport="true"
+            android:gravity="center"
+            tools:layout_editor_absoluteX="8dp"
+            tools:layout_editor_absoluteY="56dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:weightSum="24">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:weightSum="4">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/epworth_start_message"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:gravity="center"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="0"
+                            android:layout_weight="1.5"
+                            android:textSize="16sp"
+                            android:textColor="@color/colorOrange"
+                            android:gravity="right"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="- Would Never Doze"
+                            android:layout_weight=".5"
+                            android:textColor="@color/colorWhite"
+                            android:gravity="left"
+                            android:textSize="16sp"
+                            android:paddingLeft="10dp"/>
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="1"
+                            android:layout_weight="1.5"
+                            android:textSize="16sp"
+                            android:textColor="@color/colorOrange"
+                            android:gravity="right"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="- Slight Chance of Dozing"
+                            android:layout_weight=".5"
+                            android:textColor="@color/colorWhite"
+                            android:gravity="left"
+                            android:textSize="16sp"
+                            android:paddingLeft="10dp"/>
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="2"
+                            android:layout_weight="1.5"
+                            android:textSize="16sp"
+                            android:textColor="@color/colorOrange"
+                            android:gravity="right"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="- Moderate Chance of Dozing"
+                            android:layout_weight=".5"
+                            android:textColor="@color/colorWhite"
+                            android:gravity="left"
+                            android:textSize="16sp"
+                            android:paddingLeft="10dp"/>
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="3"
+                            android:layout_weight="1.5"
+                            android:textSize="16sp"
+                            android:textColor="@color/colorOrange"
+                            android:gravity="right"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="- High Chance of Dozing"
+                            android:layout_weight=".5"
+                            android:textColor="@color/colorWhite"
+                            android:gravity="left"
+                            android:textSize="16sp"
+                            android:paddingLeft="10dp"/>
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_weight=".1"
+                    android:layout_marginTop="10dp"
+                    android:background="@android:color/black"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:id="@+id/epworth_sittingReading"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="16dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginTop="8dp"
+                        android:textColor="@android:color/white"
+                        android:text="Sitting and Reading"
+                        android:textSize="18sp"
+                        android:textAllCaps="false"
+                        />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <SeekBar
+                            android:layout_weight=".5"
+                            android:id="@+id/simpleSeekBar1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:max="3"
+                            android:progress="0"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginBottom="20dp"
+                            android:thumb="@drawable/custom_seekbar_thumb"
+                            android:progressDrawable="@drawable/custom_seekbar_progress"
+                            />
+
+                        <TextView
+                            android:id="@+id/seekbar1_TextViewValue"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1.5"
+                            android:hint="0"
+                            android:textColorHint="@color/colorOrange"
+                            android:textSize="18sp"
+                            android:gravity="center"
+                            android:textColor="@color/colorOrange"
+                            />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_weight=".1"
+                    android:background="@android:color/black"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:id="@+id/epworth_watchingTV"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="16dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginTop="8dp"
+                        android:textColor="@android:color/white"
+                        android:text="Watching TV"
+                        android:textSize="18sp"
+                        android:textAllCaps="false"
+                        />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <SeekBar
+                            android:layout_weight=".5"
+                            android:id="@+id/simpleSeekBar2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:max="3"
+                            android:progress="0"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginBottom="20dp"
+                            android:thumb="@drawable/custom_seekbar_thumb"
+                            android:progressDrawable="@drawable/custom_seekbar_progress"
+                            />
+
+                        <TextView
+                            android:id="@+id/seekbar2_TextViewValue"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1.5"
+                            android:hint="0"
+                            android:textColorHint="@color/colorOrange"
+                            android:textSize="18sp"
+                            android:gravity="center"
+                            android:textColor="@color/colorOrange"
+                            />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_weight=".1"
+                    android:background="@android:color/black"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:id="@+id/epworth_sittingInactive"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="16dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginTop="8dp"
+                        android:textColor="@android:color/white"
+                        android:text="Sitting Inactive in Public"
+                        android:textSize="18sp"
+                        android:textAllCaps="false"
+                        />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <SeekBar
+                            android:layout_weight=".5"
+                            android:id="@+id/simpleSeekBar3"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:max="3"
+                            android:progress="0"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginBottom="20dp"
+                            android:thumb="@drawable/custom_seekbar_thumb"
+                            android:progressDrawable="@drawable/custom_seekbar_progress"
+                            />
+
+                        <TextView
+                            android:id="@+id/seekbar3_TextViewValue"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1.5"
+                            android:hint="0"
+                            android:textColorHint="@color/colorOrange"
+                            android:textSize="18sp"
+                            android:gravity="center"
+                            android:textColor="@color/colorOrange"
+                            />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_weight=".1"
+                    android:background="@android:color/black"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:id="@+id/epworth_asaPassenger"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="16dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginTop="8dp"
+                        android:textColor="@android:color/white"
+                        android:text="As a Passenger in a Car"
+                        android:textSize="18sp"
+                        android:textAllCaps="false"
+                        />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <SeekBar
+                            android:layout_weight=".5"
+                            android:id="@+id/simpleSeekBar4"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:max="3"
+                            android:progress="0"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginBottom="20dp"
+                            android:thumb="@drawable/custom_seekbar_thumb"
+                            android:progressDrawable="@drawable/custom_seekbar_progress"
+                            />
+
+                        <TextView
+                            android:id="@+id/seekbar4_TextViewValue"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1.5"
+                            android:hint="0"
+                            android:textColorHint="@color/colorOrange"
+                            android:textSize="18sp"
+                            android:gravity="center"
+                            android:textColor="@color/colorOrange"
+                            />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_weight=".1"
+                    android:background="@android:color/black"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:id="@+id/epworth_lyingDown"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="16dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginTop="8dp"
+                        android:textColor="@android:color/white"
+                        android:text="Lying Down to Rest in the Afternoon"
+                        android:textSize="18sp"
+                        android:textAllCaps="false"
+                        />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <SeekBar
+                            android:layout_weight=".5"
+                            android:id="@+id/simpleSeekBar5"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:max="3"
+                            android:progress="0"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginBottom="20dp"
+                            android:thumb="@drawable/custom_seekbar_thumb"
+                            android:progressDrawable="@drawable/custom_seekbar_progress"
+                            />
+
+                        <TextView
+                            android:id="@+id/seekbar5_TextViewValue"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1.5"
+                            android:hint="0"
+                            android:textColorHint="@color/colorOrange"
+                            android:textSize="18sp"
+                            android:gravity="center"
+                            android:textColor="@color/colorOrange"
+                            />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_weight=".1"
+                    android:background="@android:color/black"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:id="@+id/epworth_sittingTalking"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="16dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginTop="8dp"
+                        android:textColor="@android:color/white"
+                        android:text="Sitting and Talking to Someone"
+                        android:textSize="18sp"
+                        android:textAllCaps="false"
+                        />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <SeekBar
+                            android:layout_weight=".5"
+                            android:id="@+id/simpleSeekBar6"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:max="3"
+                            android:progress="0"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginBottom="20dp"
+                            android:thumb="@drawable/custom_seekbar_thumb"
+                            android:progressDrawable="@drawable/custom_seekbar_progress"
+                            />
+
+                        <TextView
+                            android:id="@+id/seekbar6_TextViewValue"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1.5"
+                            android:hint="0"
+                            android:textColorHint="@color/colorOrange"
+                            android:textSize="18sp"
+                            android:gravity="center"
+                            android:textColor="@color/colorOrange"
+                            />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_weight=".1"
+                    android:background="@android:color/black"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:id="@+id/epworth_sittingQuietly"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="16dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginTop="8dp"
+                        android:textColor="@android:color/white"
+                        android:text="Sitting Quitely after Lunch"
+                        android:textSize="18sp"
+                        android:textAllCaps="false"
+                        />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <SeekBar
+                            android:layout_weight=".5"
+                            android:id="@+id/simpleSeekBar7"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:max="3"
+                            android:progress="0"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginBottom="20dp"
+                            android:thumb="@drawable/custom_seekbar_thumb"
+                            android:progressDrawable="@drawable/custom_seekbar_progress"
+                            />
+
+                        <TextView
+                            android:id="@+id/seekbar7_TextViewValue"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1.5"
+                            android:hint="0"
+                            android:textColorHint="@color/colorOrange"
+                            android:textSize="18sp"
+                            android:gravity="center"
+                            android:textColor="@color/colorOrange"
+                            />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_weight=".1"
+                    android:background="@android:color/black"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:id="@+id/epworth_carStoppedinTraffic"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="16dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginTop="8dp"
+                        android:textColor="@android:color/white"
+                        android:text="In a Car Stopped in Traffic"
+                        android:textSize="18sp"
+                        android:textAllCaps="false"
+                        />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <SeekBar
+                            android:layout_weight=".5"
+                            android:id="@+id/simpleSeekBar8"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:max="3"
+                            android:progress="0"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginBottom="20dp"
+                            android:thumb="@drawable/custom_seekbar_thumb"
+                            android:progressDrawable="@drawable/custom_seekbar_progress"
+                            />
+
+                        <TextView
+                            android:id="@+id/seekbar8_TextViewValue"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1.5"
+                            android:hint="0"
+                            android:textColorHint="@color/colorOrange"
+                            android:textSize="18sp"
+                            android:gravity="center"
+                            android:textColor="@color/colorOrange"
+                            />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_weight=".1"
+                    android:background="@android:color/black"/>
+
+                <Button
+                    android:id="@+id/epworth_saveBtn"
+                    android:layout_width="260dp"
+                    android:layout_height="47dp"
+                    android:text="Save"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:textAllCaps="false"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:background="@drawable/sleep_button_2x"
+                    />
+
+
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>

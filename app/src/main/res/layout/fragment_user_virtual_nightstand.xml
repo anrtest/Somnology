@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".user_virtual_nightstand"
+    android:background="@drawable/background_2x">
+
+    <!-- TODO: Update blank fragment layout -->
+    <RelativeLayout
+        android:id="@+id/sleeptotem_GridRelativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        >
+
+        <include
+            android:id="@+id/virtual_nightstand_grid_header"
+            layout="@layout/activity_header" />
+
+        <GridView
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/virtual_nightstand_gridview"
+            android:numColumns="auto_fit"
+            android:gravity="center"
+            android:columnWidth="@dimen/_100sdp"
+            android:stretchMode="columnWidth"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_above="@id/virtual_nightstand_GridIncludeFooter"
+            android:layout_below="@id/virtual_nightstand_grid_header">
+
+
+        </GridView>
+
+        <include
+            android:id="@+id/virtual_nightstand_GridIncludeFooter"
+            layout="@layout/activity_bottom_navigation"/>
+
+    </RelativeLayout>
+</FrameLayout>

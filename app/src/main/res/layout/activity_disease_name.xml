@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".disease_name"
+    android:background="@drawable/background_2x">
+
+    <RelativeLayout
+        android:id="@+id/disease_nameRelativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <include
+            android:id="@+id/disease_nameHeader"
+            layout="@layout/activity_header"
+            />
+
+
+        <ScrollView
+            android:id="@+id/disease_nameScrollView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:fillViewport="true"
+            android:gravity="center"
+            tools:layout_editor_absoluteX="8dp"
+            tools:layout_editor_absoluteY="56dp"
+            android:layout_below="@+id/disease_nameHeader"
+            android:layout_above="@id/diseaseNameIncludeFooter">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:weightSum="6"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/diseaseName_firstHeaderText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".5"
+                    android:paddingBottom="@dimen/_10sdp"
+                    android:textSize="@dimen/_14sdp"
+                    android:layout_marginTop="15dp"
+                    android:textColor="@color/colorOrange"
+                    android:paddingLeft="25dp"/>
+
+                <TextView
+                    android:id="@+id/diseaseName_firstTextDetails"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:textSize="@dimen/_13sdp"
+                    android:textColor="@color/colorWhite"
+                    android:paddingLeft="25dp"/>
+
+                <TextView
+                    android:id="@+id/diseaseName_secondHeaderText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".5"
+                    android:text="@string/insomnia_secondHeaderText"
+                    android:paddingBottom="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_14sdp"
+                    android:textColor="@color/colorOrange"
+                    android:paddingLeft="25dp"/>
+
+                <TextView
+                    android:id="@+id/diseaseName_secondTextDetails"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+
+                    android:textSize="@dimen/_13sdp"
+                    android:textColor="@color/colorWhite"
+                    android:paddingLeft="25dp"/>
+
+                <Button
+                    android:id="@+id/diseaseName_moreInfoBtn"
+                    android:layout_width="@dimen/_114sdp"
+                    android:layout_height="@dimen/_27sdp"
+                    android:layout_weight="1"
+                    android:paddingTop="@dimen/_10sdp"
+                    android:textSize="@dimen/_14sdp"
+                    android:layout_marginLeft="@dimen/_20sdp"
+                    android:text="More Information"
+                    android:textAllCaps="false"
+                    android:background="@drawable/rounded_button_light"
+                    android:textColor="@color/colorBlack"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@android:color/black"/>
+
+            </LinearLayout>
+
+
+
+        </ScrollView>
+        <include
+            android:id="@+id/diseaseNameIncludeFooter"
+            layout="@layout/activity_bottom_navigation"/>
+
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>

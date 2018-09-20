@@ -1,0 +1,120 @@
+<resources>
+    <string name="app_name">MobileSleep</string>
+    <string name="storeButton">Store</string>
+    <string name="resourceButton">Resources</string>
+    <string name="reportsButton">Reports</string>
+    <string name="profileButton">Profile</string>
+    <string name="signInImageContent">signInImageContent</string>
+    <string name="sign_inBtnString">Sign In</string>
+    <string name="Signinpswdtxt">Password</string>
+    <string name="email_addressText">Email Address</string>
+    <string name="forgot_passwordText">Forgot Password?</string>
+    <string name="myInfoBtn">My Info</string>
+    <string name="settingsBtn">Settings</string>
+    <string name="privacyPolicyBtn">Privacy Policy and Terms of Use</string>
+    <string name="logoutBtn">Log Out</string>
+    <string name="profileHeaderTitle">General Info</string>
+    <string name="firstName">First Name</string>
+    <string name="lastName">Last Name</string>
+    <string name="profileInfoEmail">Email:</string>
+    <string name="profileInfoEmaillable">Email:</string>
+    <string name="profileInfoBirthday">Birthdate:</string>
+    <string name="profileInfoGender">Gender:</string>
+    <string name="profileinfoGenderList">Male</string>
+    <string name="gender_prompt">Sex</string>
+    <string-array name="genderList">
+        <item>Male</item>
+        <item>Female</item>
+        <item>Trans</item>
+    </string-array>
+    <string name="Headerback">Back</string>
+    <string name="Headerdone">Done</string>
+    <string name="profileinfoAdditional">Additional Info (optional)</string>
+    <string name="profileinfoMobile">Mobile Phone Number</string>
+    <string name="profileinfoAddress">Address</string>
+    <string name="profileinfoCity">City</string>
+    <string name="profileinfoState">State</string>
+    <string name="profileinfoZip">Zip Code</string>
+    <string name="profileinfoMedical">Medical Problems</string>
+    <string name="profileinfoMedication">Medications</string>
+    <string name="profileinfoChangePassword">Change Password</string>
+    <string name="resourceFollow">Follow Us</string>
+    <string name="SpCloseBtn">Close</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="userProfileStar">Stars</string>
+    <string name="userProfileProfile">Profile</string>
+    <string name="userProfileTotems">Totems</string>
+    <string name="userProfile_Owned">Owned</string>
+    <string name="userProfileQuestionaires">Questionnaires</string>
+    <string name="userProfile_LevelString">You May Have:</string>
+    <string name="title_activity_bottom_navigation">bottomNavigation</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="sleepLog_getInBedText">I\'m getting into bed</string>
+    <string name="sleepLog_LogSleepText">Log Sleep</string>
+    <string name="edit_alarm">Edit Alarm</string>
+    <string name="plexOrder_Text">Monitor your sleep patterns with the Plex® Sleep Scanner! A wearale device that measures sleep behaviours to help optimize health.\nOrder yours today!</string>
+    <string name="speech_message_taptheowl">Tap The Owl in the menu bar to set your alarm and begin your sleep.</string>
+    <string name="speech_message_reporttab">The Reports tab contain data and analytics for all of your sleep logs!</string>
+    <string name="speech_message_completeprofile">Complete your profile and answer the questionnaire to earn free stars!</string>
+    <string name="speech_message_buysleeptotems">You can buy new sleep totems or soundscapes in the sleep store!</string>
+    <string name="stopBang_header_message">Please fill in the optional fields belwo to help us get a more accurate idea of your sleep patterns.</string>
+    <string name="intro1Text">Tap the Owl in the menu bar to set your alarm and begin your sleep.</string>
+    <string name="intro2Text">The Reports tab contains data and analytics for all of your sleep logs!</string>
+    <string name="intro3Text">Complete your profile and answer the questionnaire to earn free stars!</string>
+    <string name="intro4Text">You can buy new sleep totems or soundscapes in the sleep store!</string>
+    <string name="positiveButton">Yes</string>
+    <string name="negativeBotton">No</string>
+    <string name="successfulSignupMessage">"Welcome to MobileSleepDoc Pro!\nCongratulations, you've just earned 40 stars for signing on. Fill out your profile and answer a few questions to earn up to 100 stars."</string>
+    <string name="alertBoxTitle">MobileSleepDoc</string>
+    <string name="congratulations">Congratulations!</string>
+    <string name="pc_shortDesc">You have completed your profile and earned 100 stars!</string>
+    <string name="title_activity_sleep_log_report"></string>
+    <string name="tab_text_1">Tab 1</string>
+    <string name="tab_text_2">Tab 2</string>
+    <string name="tab_text_3">Tab 3</string>
+    <string name="tab_text_4">Tab 4</string>
+    <string name="action_settings">Settings</string>
+    <string name="section_format">Hello World from section: %1$d</string>
+    <string name="epworth_start_message">Use the following scale to choose the most appropriate number for each situation</string>
+    <string name="insomnia_firstHeaderText">Insomnia</string>
+    <string name="insomniaDisease_textFirst">Insomnia is charaacterized by difficulty falling and/or staying asleep,usually associated withy daytime symptoms such as mental fogginess or fatigue. 30% of the population suffers from insomnia at some point, and for about 1 in 10people insomnia is a persistent problem. Sleep studies are not usually needed to diagnose insomnia, but may be ordered if another sleep disorder is suspected, like sleep apnea.</string>
+    <string name="insomnia_secondHeaderText">How it\'s Treated</string>
+    <string name="insomniaDisease_textSecond">The main treatment for insomnia is changing the way you think or behave around your sleep schedule, also called cognitive behavioral therapy. Behavioral changes can be accomplished using programs like stimulus control therapy and sleep restriction therapy, done in conjunction with keeping daily sleep logs. It is important to prepare an ideal sleep environment internally and externally, and to maintain a regular bedtime and wake-up time as much as possible. Also, these programs stress the importance of getting out of bed if you are having trouble sleeping, instead of lying in bed worrying about not sleeping. Medications may be helpful as well, but best for short-term usage.</string>
+    <string name="sleepBreath_firstHeaderText">Sleep Breathing Disorder</string>
+    <string name="sleepBreath_firstText">Sleep-breathing disorders include obstructive sleep apnea-hypopnea syndrome (“OSA” for simplicity) among others. We focus on OSA since it is common and associated with many medical problems. OSA is caused by obstruction in the upper airway (nose to throat), usually at the base of the tongue. Obstruction of the upper airway cause decreases in airflow and therefore oxygen. Repeated episodes of obstruction are associated with medical problems like heart disease, memory loss, and increased risk for accidents. OSA is diagnosed with a sleep study, either in a laboratory setting or at home. </string>
+    <string name="sleepBreath_secondText">OSA may be treated in many different ways. Behavioral changes are helpful, like losing weight, side sleeping, and avoiding alcohol before bed. The medical “gold standard” is continuous positive airway pressure (CPAP) which acts as a splint to open the airway. Other treatments include devices made by a dentist to stabilize the jaw and tongue in a more forward position, and a variety of surgeries aimed at different parts of the upper airway to create more space for air to flow. Newer treatments are being developed all the time, so find out more from your doctor or sleep specialist.</string>
+    <string name="excessiveSleep_firstHeaderText">Excessive Daytime Sleepiness</string>
+    <string name="excessiveSleep_firstText">Daytime sleepiness is considered excessive when it interferes with daytime performance. Excessive daytime sleepiness (EDS) may be medically significant if sleep occurs unintentionally during your usual waking hours. EDS is not the same a fatigue, which may include features such as loss of stamina, strength, or concentration. There are many possible causes of EDS, such as an underlying sleep problem, medications, or mood disorder like depression. The major health risk associated with EDS is an increased risk of accidents. The diagnosis of the underlying cause of EDS is made after a very thorough assessment by your doctor. The Epworth Sleepiness Scale is a common measure of daytime sleepiness. Additional tests will depend on your doctor’s assessment, but may include a sleep study.</string>
+    <string name="excessiveSleep_secondText">Treatment of EDS is determined by the underlying cause(s).  Close follow-up is needed to be sure your level of sleepiness improves with the treatment of the suspected cause(s).</string>
+    <string-array name="reportsToolBarSelection">
+        <item>Avergae Hours Slept</item>
+        <item>Sleep Log Report</item>
+        <item>Avergae Sleep Efficency</item>
+        <item>Sleep Efficency Per Night</item>
+        <item>Wakeup Time Activity Report</item>
+        <item>Hours Per Night</item>
+    </string-array>
+    <string name="interviewQuestion_header_message">Mandatory Questions</string>
+    <string name="pig">The Pig is highly intelligent and symbolizes wealth and properity. The pig spirit warns us to shy away from ovberindulgence and slefishness, not to be addicted to material things so that we may grow spiritually instead.</string>
+    <string name="deer">The Deer signifies natural beauty and grace. The deer spirit acts in quick bursts of high energy, and shows us the value of play in enjoying life and our relationships.</string>
+    <string name="sheep">The Sheep signifies the importance of self-reflection, taking the time to understand ourselves better so that we may succeed in creating our own uniques path.</string>
+    <string name="fox">The Fox represents change, shape-shifting, and suprise. The Fox appears in our dreams to spark our imagination and creativity.</string>
+    <string name="penguin">The Penguin signifies adaptabilityu even in the face of chaos. The Penguin encourages us to control our emotions, find balance, and trust ourselves.</string>
+    <string name="cow">The Cow is nuturing and caring, and symbolizes fertility. The cow spirit reminds us to try to take a more docile approach to a situation at hand, yet to pay close attention to be sure we are not blindly following the lead to others.</string>
+    <string name="chicken">The Chicken has great potential but tends to be distracted and prone to gossipe. The chicken spirit reminds us to focus and listen carefully, in order to accomplish the tasks we set out to accomplish.</string>
+    <string name="dolphion">The Dolphin represents the melding of the mind and spirit to highten our communication. The dolphin spirit challenges us to explore the depths of our own psyches in order to experience a spiritual awakening</string>
+    <string name="rabbit">The Rabbit symbolizes good luck, magic fertility, and abundance. The rabbit spirit reminds us to remain postimistic and to create joy and faithfulness in our relationships.</string>
+    <string name="monkey">The Monkey is playful and lighthearted. The monkey spirit awakens out inner child, but warns us of false friendships with those that may want to take advantage of us.</string>
+    <string name="lion">The Lion is a powerful symbol of strength, courage, and leadership. The lion spirit gives us courage and helps us overcome obstacles, but also cautions us against the obstacle of our own pride.</string>
+    <string name="tiger">The Tiger symbolizes good health, beauty, freedom, and vitality. The tiger spirit helps us release this energy to gather inner strength and self-confidence.</string>
+    <string name="dog">Ths Dog is a powerful friend and ally, sharing its gifts of loyalty, generosity, protection, and unconditional love. Knowing a dogs spirit givesb us confidence to go forward without hesitation.</string>
+    <string name="zebra">The Zebra teaches us to look at things from different angles or viewpoints. The Zebra reminds us of the power of teamwork to acheive our goals, both for the individual and the group.</string>
+    <string name="leopard">The Leopard symbolizes, patience nd persistence. The leopard spirit teaches us self-respect, acceptance, and perseverance.</string>
+    <string name="panda">The Panda symbolizes gentleness and gratitude, and in a dream is a reminder to seek solitude, and reflcet, and nourish yourself.</string>
+    <string name="elephant">The Elephant symbolizes dignity, strength, and wisdom. The elephant spirit is healing and reminds us to be patient with others.</string>
+    <string name="horse">The Horse signifies power and strength. The horse spirit challenges the dreamer to achieve a higher sense of awareness and to surrender control to the horse and its power. The horse is then able to guide us on our individual path.</string>
+</resources>

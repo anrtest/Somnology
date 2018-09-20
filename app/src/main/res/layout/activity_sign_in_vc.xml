@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_2x"
+    tools:context="com.carobar.somnology.signInVC"
+    tools:layout_editor_absoluteY="25dp">
+
+
+    <include
+        android:id="@+id/includedHeaderSignin"
+        layout="@layout/activity_header"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!--<TextView-->
+        <!--android:id="@+id/signIn_screenName"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="0dp"-->
+        <!--android:layout_marginTop="16dp"-->
+        <!--android:text="Sign In"-->
+        <!--android:textAlignment="center"-->
+        <!--android:textColor="@android:color/darker_gray"-->
+        <!--android:textSize="18sp"-->
+        <!--app:layout_constraintEnd_toEndOf="parent"-->
+        <!--app:layout_constraintHorizontal_bias="0.498"-->
+        <!--app:layout_constraintStart_toStartOf="parent"-->
+        <!--app:layout_constraintTop_toTopOf="parent" />-->
+
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/includedHeaderSignin">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="0dp"
+                android:layout_height="225dp"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginEnd="4dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="30dp"
+                android:contentDescription="@string/signInImageContent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/logo_full_2x" />
+
+            <EditText
+                android:id="@+id/txtEmailSignin"
+                android:layout_width="0dp"
+                android:layout_height="63dp"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginEnd="32dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/textfield_dark_bg_2x"
+                android:ems="10"
+                android:gravity="center_horizontal|center_vertical"
+                android:hint="@string/email_addressText"
+                android:inputType="textEmailAddress"
+                android:text=""
+                android:textAlignment="center"
+                android:textColor="#20B2AA"
+                android:textColorHint="#20B2AA"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+            <EditText
+                android:id="@+id/txtPasswordSignin"
+                android:layout_width="0dp"
+                android:layout_height="63dp"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginEnd="32dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/textfield_dark_bg_2x"
+                android:ems="10"
+                android:gravity="center_horizontal|center_vertical"
+                android:hint="@string/Signinpswdtxt"
+                android:inputType="textPassword"
+                android:textAlignment="center"
+                android:textColor="#20B2AA"
+                android:textColorHint="#20B2AA"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtEmailSignin" />
+
+            <Button
+                android:id="@+id/btnSignIn"
+                android:layout_width="0dp"
+                android:layout_height="63dp"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginEnd="32dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/sign_up_2x"
+                android:backgroundTint="?attr/colorControlActivated"
+                android:gravity="center_horizontal|center_vertical"
+                android:text="@string/sign_inBtnString"
+                android:textAllCaps="false"
+                android:textColor="@android:color/background_dark"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtPasswordSignin" />
+
+            </android.support.constraint.ConstraintLayout>
+
+
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/signin_forget_password"
+        style="@style/WhiteText"
+        android:layout_width="0dp"
+        android:layout_height="23dp"
+        android:layout_marginBottom="1dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginStart="32dp"
+        android:gravity="center_horizontal"
+        android:text="@string/forgot_passwordText"
+        android:textAlignment="center"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+</android.support.constraint.ConstraintLayout>

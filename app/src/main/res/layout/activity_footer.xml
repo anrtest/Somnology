@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_footer"
+    android:layout_width="match_parent"
+    android:layout_height="80dp"
+    android:layout_alignParentBottom="true"
+    android:layout_gravity="center">
+
+
+    <!-- Footer aligned to bottom -->
+    <RelativeLayout
+        android:id="@+id/spFooter"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_alignParentBottom="true"
+        android:background="#062a36">
+
+        <Button
+            android:id="@+id/ProfileFooter"
+            android:layout_width="65dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp"
+            android:background="#062a36"
+            android:onClick="show_profile"
+            android:drawableTop="@drawable/profile_icon_2x"
+            android:paddingTop="0dp"
+            android:text="@string/profileButton"
+            android:textAllCaps="false"
+            android:textColor="#b8c6cc"
+            android:textSize="12sp" />
+
+        <Button
+            android:id="@+id/ReportsFooter"
+            android:layout_width="65dp"
+            android:layout_height="match_parent"
+            android:layout_alignBaseline="@+id/ProfileFooter"
+            android:layout_alignBottom="@+id/ProfileFooter"
+            android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_toEndOf="@+id/ProfileFooter"
+            android:layout_toRightOf="@+id/ProfileFooter"
+            android:background="#062a36"
+            android:drawableTop="@drawable/report_icon_2x"
+            android:paddingTop="0dp"
+            android:text="@string/reportsButton"
+            android:textAllCaps="false"
+            android:textColor="#b8c6cc"
+            android:textSize="12sp" />
+
+        <Button
+            android:id="@+id/StoreFooter"
+            android:layout_width="65dp"
+            android:layout_height="match_parent"
+            android:layout_alignBaseline="@+id/ResourcesFooter"
+            android:layout_alignBottom="@+id/ResourcesFooter"
+            android:layout_marginLeft="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_toStartOf="@+id/ResourcesFooter"
+            android:layout_toLeftOf="@+id/ResourcesFooter"
+            android:background="#062a36"
+            android:drawableTop="@drawable/store_icon_2x"
+            android:paddingTop="0dp"
+            android:text="@string/storeButton"
+            android:textAllCaps="false"
+            android:textColor="#b8c6cc"
+            android:textSize="12sp" />
+
+        <Button
+            android:id="@+id/ResourcesFooter"
+            android:layout_width="65dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:background="#062a36"
+            android:drawableTop="@drawable/resource_icon_2x"
+            android:paddingTop="10dp"
+            android:text="@string/resourceButton"
+            android:textAllCaps="false"
+            android:textColor="#b8c6cc"
+            android:textSize="12sp" />
+
+    </RelativeLayout>
+
+
+</RelativeLayout>
+

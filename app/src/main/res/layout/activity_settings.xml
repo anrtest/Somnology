@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_2x"
+    tools:context="com.carobar.somnology.Settings">
+
+    <RelativeLayout
+        android:id="@+id/spFooter"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true">
+
+        <include
+            android:id="@+id/profile_header"
+            layout="@layout/activity_header" />
+
+
+        <include
+            android:id="@+id/settingsIncludeFooter"
+            layout="@layout/activity_bottom_navigation"/>
+
+
+        <ScrollView
+            android:id="@+id/ScrollView_form"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_above="@id/settingsIncludeFooter"
+            android:layout_below="@id/profile_header"
+
+            android:gravity="center"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="56dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#0b3745"
+                android:orientation="vertical">
+
+
+                <Button
+                    android:id="@+id/myInfoBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="start"
+                    android:background="#105469"
+                    android:drawableRight="@drawable/next_arrow_2x"
+                    android:padding="15dp"
+                    android:text="@string/myInfoBtn"
+                    android:textAlignment="viewStart"
+                    android:textAllCaps="false"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"/>
+
+                <Button
+                    android:id="@+id/settingsBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:background="#105469"
+                    android:drawableRight="@drawable/next_arrow_2x"
+                    android:textAllCaps="false"
+                    android:padding="15dp"
+                    android:text="@string/settingsBtn"
+                    android:textAlignment="viewStart" />
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"/>
+
+                <Button
+                    android:id="@+id/privacyPolicyBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:background="#105469"
+                    android:drawableRight="@drawable/next_arrow_2x"
+                    android:padding="15dp"
+                    android:text="@string/privacyPolicyBtn"
+                    android:textAlignment="viewStart"
+                    android:textAllCaps="false"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"/>
+
+                <Button
+                    android:id="@+id/logoutBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:background="#105469"
+                    android:drawableRight="@drawable/next_arrow_2x"
+                    android:padding="15dp"
+                    android:text="@string/logoutBtn"
+                    android:textAlignment="viewStart"
+                    android:textAllCaps="false"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"/>
+            </LinearLayout>
+        </ScrollView>
+
+
+    </RelativeLayout>
+</android.support.constraint.ConstraintLayout>

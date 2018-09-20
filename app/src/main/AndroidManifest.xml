@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.carobar.somnology">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <application
+        android:name=".SleepApp"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher_somo"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_somo"
+        android:supportsRtl="true"
+        android:testOnly="false"
+        android:theme="@style/Theme.AppCompat.NoActionBar"
+        tools:remove="true">
+
+        <!-- android:theme="@style/AppTheme" -->
+        <activity
+            android:name=".Footer"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".MainIntro"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".signInVC"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".MainActivity"
+            android:parentActivityName=".MainActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.support.Parent_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
+        <activity
+            android:name=".Profile"
+            android:parentActivityName=".signInVC"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.support.Parent_ACTIVITY"
+                android:screenOrientation="portrait"
+                android:value=".signInVC" />
+        </activity>
+        <activity
+            android:name=".Header"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Settings"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".webPage"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".resources"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".UserProfile"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".bottomNavigation"
+            android:label="@string/title_activity_bottom_navigation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".settings_config"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ForgetPassword"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ResetPassword"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Signup"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Store"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Reports"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".LogSleep"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".SleepQuestions"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".SignIn_Up"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Intro_ReportTab"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Intro_complete_profile"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Intro_buy_sleep_totems"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".EditAlarm"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".PlexPreorder"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Intro_TapTheOwl"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".stop_bang"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".SleepLogReport"
+            android:label="@string/title_activity_sleep_log_report"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <activity android:name=".epworth_sleepiness" />
+        <activity android:name=".disease_name" />
+        <activity android:name=".disease_pdf_viewer" />
+        <activity android:name=".Average_hours_slept"></activity>
+    </application>
+
+</manifest>

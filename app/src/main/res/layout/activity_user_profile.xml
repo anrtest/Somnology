@@ -1,0 +1,718 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_2x"
+    tools:context="com.carobar.somnology.UserProfile">
+    <RelativeLayout
+        android:id="@+id/userProfile_mainRelativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="2dp"
+        android:paddingRight="2dp">
+
+        <include
+            android:id="@+id/userProfile_Header"
+            layout="@layout/activity_header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <!--<TextView-->
+            <!--android:id="@+id/userProfile_ScreenName"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_alignParentTop="true"-->
+            <!--android:layout_centerHorizontal="true"-->
+            <!--android:layout_marginTop="16dp"-->
+            <!--android:text="My Sleep Profile"-->
+            <!--android:textAlignment="center"-->
+            <!--android:textColor="@android:color/white"-->
+            <!--android:textSize="20dp" />-->
+
+        <Button
+            android:id="@+id/userProfile_settingBtn"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/settings_2x"
+            android:padding="2dp"
+            android:paddingTop="5dp"
+            android:textAlignment="viewStart"
+            android:gravity="start"/>
+
+        <Button
+            android:id="@+id/userProfile_exportBtn"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/exportbutton_bg_2x"
+            android:gravity="end"
+            android:padding="2dp"
+            android:paddingTop="5dp"
+            android:textAlignment="viewEnd" />
+
+        <ScrollView
+            android:id="@+id/userProfile_ScrollView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:fillViewport="true"
+            android:gravity="center"
+            tools:layout_editor_absoluteX="8dp"
+            tools:layout_editor_absoluteY="56dp"
+            android:layout_below="@+id/userProfile_Header"
+            android:layout_above="@id/userProfileIncludeFooter"
+            android:background="@drawable/background_2x"
+            >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/userProfileIncludeFooter"
+                android:background="@drawable/background_2x"
+                >
+                <android.support.constraint.ConstraintLayout
+                    android:id="@+id/userProfileLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_2x">
+                    <TextView
+                        android:id="@+id/userProfile_Name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_20sdp"
+                        android:layout_marginTop="8dp"
+                        android:text="Profile Profile"
+                        android:textSize="@dimen/_20sdp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </android.support.constraint.ConstraintLayout>
+
+                <android.support.constraint.ConstraintLayout
+                    android:id="@+id/userProfile_MainConstVideoView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/userProfileLayout"
+                    android:background="@drawable/bg_2x">
+                    <VideoView
+                        android:id="@+id/userProfile_Video"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:visibility="visible"
+                        />
+
+                    <android.support.constraint.ConstraintLayout
+                        android:id="@+id/userProfileDashView"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:visibility="invisible"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/userProfile_Video">
+                        <!--Row 1-->
+                        <ImageView
+                            android:id="@+id/imageView2"
+                            android:layout_width="@dimen/_60sdp"
+                            android:layout_height="@dimen/_60sdp"
+                            android:layout_marginEnd="@dimen/_24sdp"
+                            android:layout_marginStart="@dimen/_24sdp"
+                            android:layout_marginTop="@dimen/_8sdp"
+                            android:layout_weight="2"
+                            android:background="@drawable/singlestar_2x"
+                            app:layout_constraintEnd_toStartOf="@+id/imageView3"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/userProfile_Stars"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="@dimen/_8sdp"
+                            android:layout_marginStart="@dimen/_8sdp"
+                            android:layout_marginTop="@dimen/_8sdp"
+                            android:text="@string/userProfileStar"
+                            android:textAlignment="center"
+                            android:textSize="@dimen/_20sdp"
+                            app:layout_constraintEnd_toEndOf="@+id/imageView2"
+                            app:layout_constraintStart_toStartOf="@+id/imageView2"
+                            app:layout_constraintTop_toBottomOf="@+id/imageView2"
+                            tools:text="@string/userProfileStar" />
+
+                        <TextView
+                            android:id="@+id/userProfile_StarsValue"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="@dimen/_8sdp"
+                            android:layout_marginStart="@dimen/_8sdp"
+                            android:layout_marginTop="@dimen/_2sdp"
+                            android:paddingBottom="@dimen/_10sdp"
+                            android:text="10"
+                            android:textAlignment="center"
+                            android:textSize="@dimen/_20sdp"
+                            app:layout_constraintEnd_toEndOf="@+id/userProfile_Stars"
+                            app:layout_constraintStart_toStartOf="@+id/userProfile_Stars"
+                            app:layout_constraintTop_toBottomOf="@+id/userProfile_Stars"
+                            tools:text="10" />
+
+                        <!--row 2-->
+                        <ImageView
+                            android:id="@+id/imageView3"
+                            android:layout_width="@dimen/_80sdp"
+                            android:layout_height="@dimen/_60sdp"
+                            android:layout_marginEnd="@dimen/_8sdp"
+                            android:layout_marginStart="@dimen/_8sdp"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:background="@drawable/sheep_2x"
+                            android:contentDescription="TODO"
+                            android:maxHeight="100dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/userProfile_Profile"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="@dimen/_8sdp"
+                            android:layout_marginStart="@dimen/_8sdp"
+                            android:layout_marginTop="@dimen/_8sdp"
+                            android:text="@string/userProfileProfile"
+                            android:textAlignment="center"
+                            android:textSize="@dimen/_15sdp"
+                            app:layout_constraintEnd_toEndOf="@+id/imageView3"
+                            app:layout_constraintStart_toStartOf="@+id/imageView3"
+                            app:layout_constraintTop_toBottomOf="@+id/imageView3"
+                            tools:text="@string/userProfileProfile" />
+
+                        <TextView
+                            android:id="@+id/userProfile_ProfileValue"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_8sdp"
+                            android:layout_marginTop="@dimen/_2sdp"
+                            android:paddingBottom="@dimen/_10sdp"
+                            android:layout_weight=".5"
+                            android:text="100%"
+                            android:textAlignment="center"
+                            android:textSize="@dimen/_20sdp"
+                            app:layout_constraintEnd_toEndOf="@+id/userProfile_Profile"
+                            app:layout_constraintStart_toStartOf="@+id/userProfile_Profile"
+                            app:layout_constraintTop_toBottomOf="@+id/userProfile_Profile" />
+
+                        <!--row 3-->
+
+                        <TextView
+                            android:id="@+id/userProfile_TotemNumber"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/_4sdp"
+                            android:layout_marginEnd="@dimen/_4sdp"
+                            android:layout_marginStart="@dimen/_4sdp"
+                            android:layout_marginTop="@dimen/_4sdp"
+                            android:textAlignment="center"
+                            android:textSize="@dimen/_20sdp"
+
+                            app:layout_constraintBottom_toBottomOf="@+id/imageView4"
+                            app:layout_constraintEnd_toEndOf="@+id/imageView4"
+                            app:layout_constraintStart_toStartOf="@+id/imageView4"
+                            app:layout_constraintTop_toTopOf="@+id/imageView4"
+                            tools:text="100" />
+
+                        <ProgressBar
+                            android:id="@+id/imageView4"
+
+                            style="?android:attr/progressBarStyleHorizontal"
+                            android:layout_width="@dimen/_100sdp"
+                            android:layout_height="@dimen/_60sdp"
+                            android:layout_marginEnd="@dimen/_24sdp"
+                            android:layout_marginStart="@dimen/_24sdp"
+                            android:layout_marginTop="@dimen/_8sdp"
+                            android:layout_weight="2"
+                            android:indeterminate="false"
+                            android:max="100"
+                            android:progressDrawable="@drawable/circular_progress_bar"
+                            android:rotation="-90"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/imageView3"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+
+
+                        <TextView
+                            android:id="@+id/userProfile_Totems"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="@dimen/_8sdp"
+                            android:layout_marginStart="@dimen/_8sdp"
+                            android:layout_marginTop="@dimen/_8sdp"
+                            android:text="@string/userProfileTotems"
+                            android:textAlignment="center"
+                            android:textSize="@dimen/_20sdp"
+                            app:layout_constraintEnd_toEndOf="@+id/imageView4"
+                            app:layout_constraintStart_toStartOf="@+id/imageView4"
+                            app:layout_constraintTop_toBottomOf="@+id/imageView4"
+                            tools:text="@string/userProfileTotems" />
+
+                        <TextView
+                            android:id="@+id/userProfile_TotemsValue"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="@dimen/_8sdp"
+                            android:layout_marginStart="@dimen/_8sdp"
+                            android:layout_marginTop="@dimen/_2sdp"
+                            android:paddingBottom="@dimen/_10sdp"
+                            android:text="@string/userProfile_Owned"
+                            android:textAlignment="center"
+                            android:textSize="@dimen/_20sdp"
+                            app:layout_constraintEnd_toEndOf="@+id/userProfile_Totems"
+                            app:layout_constraintStart_toStartOf="@+id/userProfile_Totems"
+                            app:layout_constraintTop_toBottomOf="@+id/userProfile_Totems"
+                            tools:text="@string/userProfile_Owned" />
+
+
+                    </android.support.constraint.ConstraintLayout>
+
+                    <!--<LinearLayout-->
+                        <!--android:layout_width="386dp"-->
+                        <!--android:layout_height="0dp"-->
+                        <!--android:orientation="horizontal"-->
+                        <!--android:weightSum="3"-->
+                        <!--app:layout_constraintEnd_toEndOf="parent"-->
+                        <!--app:layout_constraintStart_toStartOf="parent"-->
+                        <!--app:layout_constraintTop_toTopOf="parent">-->
+
+                        <!--<LinearLayout-->
+                            <!--android:layout_width="0dp"-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:layout_weight="1"-->
+                            <!--android:orientation="vertical"-->
+                            <!--android:weightSum="3">-->
+
+                            <!---->
+
+
+                        <!--</LinearLayout>-->
+
+                        <!--<LinearLayout-->
+                            <!--android:layout_width="0dp"-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:layout_weight="1"-->
+                            <!--android:orientation="vertical"-->
+                            <!--android:weightSum="3">-->
+
+                            <!---->
+                        <!--</LinearLayout>-->
+
+                        <!--<LinearLayout-->
+                            <!--android:layout_width="0dp"-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:layout_weight="1"-->
+                            <!--android:orientation="vertical"-->
+                            <!--android:weightSum="3">-->
+
+                            <!---->
+
+                        <!--</LinearLayout>-->
+
+
+                    <!--</LinearLayout>-->
+
+
+
+
+
+                </android.support.constraint.ConstraintLayout>
+
+                <LinearLayout
+                    android:id="@+id/userProfile_diseaseSection"
+                    android:layout_width="match_parent"
+                    android:layout_height="800dp"
+                    android:layout_marginTop="5dp"
+                    android:orientation="vertical"
+                    android:weightSum="16"
+                    android:layout_below="@+id/userProfile_MainConstVideoView"
+                    android:background="@drawable/background_2x">
+
+                    <Button
+                        android:id="@+id/userProfile_Questions"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_gravity="start"
+                        android:layout_marginTop="2dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/background_2x"
+                        android:drawableRight="@drawable/next_arrow_2x"
+                        android:padding="5dp"
+                        android:textColor="@color/colorWhite"
+                        android:text="@string/userProfileQuestionaires"
+                        android:textAlignment="viewStart"
+                        android:textAllCaps="false" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="@android:color/black"/>
+
+                    <Button
+                        android:id="@+id/userProfile_diseaseLevel"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_gravity="start"
+                        android:layout_marginTop="2dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/background_2x"
+                        android:padding="5dp"
+                        android:textColor="@color/colorWhite"
+                        android:text="@string/userProfile_LevelString"
+                        android:textAlignment="viewStart"
+                        android:textAllCaps="false" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="@android:color/black"/>
+
+                    <Button
+                        android:id="@+id/userProfile_insomnia"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_gravity="start"
+                        android:layout_marginTop="2dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/background_2x"
+                        android:drawableRight="@drawable/next_arrow_2x"
+                        android:padding="5dp"
+                        android:text="Insomnia"
+                        android:textAlignment="viewStart"
+                        android:textAllCaps="false"
+                        android:textSize="14sp" />
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="@android:color/black"/>
+
+                    <Button
+                        android:id="@+id/userProfile_sleepBreathing"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_gravity="start"
+                        android:layout_marginTop="2dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/background_2x"
+                        android:drawableRight="@drawable/next_arrow_2x"
+                        android:padding="5dp"
+                        android:text="Sleep Breathing Disorder"
+                        android:textAlignment="viewStart"
+                        android:textAllCaps="false"
+                        android:textSize="14sp" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="@android:color/black"/>
+
+                    <Button
+                        android:id="@+id/userProfile_excessiveDaytimeSleep"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_gravity="start"
+                        android:layout_marginTop="2dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/background_2x"
+                        android:drawableRight="@drawable/next_arrow_2x"
+                        android:padding="5dp"
+                        android:text="Excessive Daytime Sleepiness"
+                        android:textAlignment="viewStart"
+                        android:textAllCaps="false"
+                        android:textSize="14sp" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="@android:color/black"/>
+
+                    <TextView
+                        android:id="@+id/userProfile_DevicesSection"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_gravity="start"
+                        android:layout_weight="1"
+
+                        android:layout_marginTop="2dp"
+                        android:padding="5dp"
+                        android:text="Devices"
+                        android:textAlignment="viewStart"
+                        android:textAllCaps="false"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="@android:color/black"/>
+
+                    <LinearLayout
+                    android:id="@+id/userProfile_fitbitSection"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:layout_below="@id/userProfile_DevicesSection"
+
+                    android:layout_marginTop="1dp"
+                    android:layout_marginBottom="1dp"
+                    android:orientation="horizontal"
+                    android:weightSum="3">
+                    <ImageButton
+                        android:id="@+id/userProfile_FitbitImage"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".5"
+                        android:layout_marginTop="1dp"
+
+                        android:background="@drawable/fitbit_3x"/>
+                    <Button
+                        android:id="@+id/userProfile_Devicefitbit"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="start"
+                        android:layout_marginTop="1dp"
+                        android:layout_weight="1.7"
+                        android:background="@drawable/background_2x"
+                        android:padding="5dp"
+                        android:text="Fitbit"
+                        android:textAlignment="viewStart"
+                        android:textAllCaps="false"
+                        android:textSize="14sp" />
+                    <Button
+                        android:id="@+id/userProfile_connectFitbit"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="start"
+                        android:layout_marginTop="1dp"
+                        android:layout_weight=".8"
+                        android:padding="@dimen/_5sdp"
+                        android:background="@drawable/background_2x"
+                        android:drawableRight="@drawable/next_arrow_2x"
+                        android:text="Connect"
+                        android:textAlignment="viewStart"
+                        android:textAllCaps="false"
+                        android:textSize="@dimen/_12sdp" />
+                </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@android:color/black"/>
+                <LinearLayout
+                    android:id="@+id/userProfile_PlexSection"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:layout_below="@id/userProfile_fitbitSection"
+                    android:background="@drawable/background_2x"
+                    android:layout_marginTop="1dp"
+                    android:layout_marginBottom="1dp"
+                    android:orientation="horizontal"
+                    android:weightSum="3">
+                    <ImageButton
+                        android:id="@+id/userProfile_plexImageBtn"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".5"
+                        android:layout_marginTop="1dp"
+                        android:layout_marginLeft="1dp"
+                        android:scaleType="centerInside"
+                        android:background="@drawable/plex_2x"/>
+                    <Button
+                        android:id="@+id/userProfile_Deviceplex"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="start"
+                        android:layout_marginTop="1dp"
+                        android:layout_weight="2.5"
+                        android:background="@drawable/background_2x"
+                        android:drawableRight="@drawable/next_arrow_2x"
+                        android:padding="5dp"
+                        android:text="Plex"
+                        android:textAlignment="viewStart"
+                        android:textAllCaps="false"
+                        android:textSize="14sp" />
+                    <!--<Button-->
+                        <!--android:id="@+id/userProfile_connectPlex"-->
+                        <!--android:layout_width="0dp"-->
+                        <!--android:layout_height="match_parent"-->
+                        <!--android:layout_gravity="start"-->
+                        <!--android:layout_marginTop="2dp"-->
+                        <!--android:layout_weight=".7"-->
+                        <!--android:background="@color/settingsButtonColor"-->
+                        <!--android:drawableRight="@drawable/next_arrow_2x"-->
+                        <!--android:padding="5dp"-->
+                        <!--android:text="Connect"-->
+                        <!--android:textAlignment="viewStart"-->
+                        <!--android:textAllCaps="false"-->
+                        <!--android:textSize="14sp" />-->
+                </LinearLayout>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="@android:color/black"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:layout_below="@id/userProfile_PlexSection"
+                        android:background="@color/settingsButtonColor"
+                        android:layout_marginTop="5dp"
+                        android:orientation="horizontal"
+                        android:weightSum="3">
+
+
+                        <Button
+                            android:id="@+id/userProfile_virtualNightStand"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="start"
+                            android:layout_weight="2.4"
+                            android:background="@drawable/background_2x"
+                            android:padding="5dp"
+
+                            android:text="Virtual Night Stand"
+                            android:textAlignment="viewStart"
+                            android:textAllCaps="false"
+                            android:textColor="@android:color/white"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+                        <Button
+                            android:id="@+id/userProfile_seeAllVirtualNS"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="start"
+                            android:layout_weight=".6"
+                            android:background="@drawable/background_2x"
+                            android:drawableRight="@drawable/next_arrow_2x"
+                            android:padding="@dimen/_5sdp"
+                            android:text="See All"
+                            android:textAlignment="viewStart"
+                            android:textAllCaps="false"
+                            android:textSize="@dimen/_10sdp" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/userProfile_virtualNightStandView"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_gravity="start"
+                        android:gravity="center_vertical"
+                        android:layout_weight="3"
+                        android:background="@drawable/background_2x"
+                        android:paddingTop="0dp"
+                        android:padding="5dp"
+                        android:text="You have no purchased Totems."
+                        android:textAlignment="center"
+                        android:textAllCaps="false"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="@android:color/black"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:layout_below="@id/userProfile_virtualNightStandView"
+                        android:background="@drawable/background_2x"
+                        android:layout_marginTop="5dp"
+                        android:orientation="horizontal"
+                        android:weightSum="3">
+                        <Button
+                            android:id="@+id/userProfile_Soundscapes"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="start"
+                            android:layout_weight="2.4"
+                            android:background="@drawable/background_2x"
+                            android:padding="5dp"
+                            android:text="Soundscapes"
+                            android:textAlignment="viewStart"
+                            android:textAllCaps="false"
+                            android:textSize="18sp"
+                            android:textColor="@android:color/white"
+                            android:textStyle="bold" />
+                        <Button
+                            android:id="@+id/userProfile_seeAllSoundscapes"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="start"
+                            android:layout_weight=".6"
+                            android:background="@drawable/background_2x"
+                            android:drawableRight="@drawable/next_arrow_2x"
+                            android:padding="@dimen/_5sdp"
+                            android:text="See All"
+                            android:textAlignment="viewStart"
+                            android:textAllCaps="false"
+                            android:textSize="@dimen/_10sdp" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/userProfile_SoundscapesView"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_gravity="start"
+                        android:gravity="center_vertical"
+                        android:layout_weight="3"
+                        android:background="@drawable/background_2x"
+                        android:padding="5dp"
+                        android:paddingTop="0dp"
+
+                        android:text="You have no purchased Soundscapes."
+                        android:textAlignment="center"
+                        android:textAllCaps="false"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="@android:color/black"/>
+                </LinearLayout>
+
+
+
+
+
+            </RelativeLayout>
+
+        </ScrollView>
+        <include
+            android:id="@+id/userProfileIncludeFooter"
+            layout="@layout/activity_bottom_navigation"/>
+
+        <!--<include-->
+            <!--android:id="@+id/userProfile_Footer"-->
+            <!--layout="@layout/activity_footer"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content" />-->
+
+        <!--<include-->
+            <!--android:id="@+id/userProfile_Logo"-->
+            <!--layout="@layout/activity_sleeplogfooter" />-->
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".interview_questions"
+    android:background="#062a36">
+
+    <!-- TODO: Update blank fragment layout -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#062a36">
+
+        <include
+            android:id="@+id/interview_question_header"
+            layout="@layout/activity_header" />
+
+        <LinearLayout
+            android:id="@+id/interview_questionfirstLinearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/interview_question_header"
+            android:background="@color/settingsButtonColor"
+            android:orientation="vertical"
+            android:padding="15dp"
+            android:weightSum="3">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_weight="1"
+                android:text="@string/interviewQuestion_header_message"
+                android:textColor="@color/colorOrange" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.3dp"
+                android:background="@android:color/black" />
+
+            <Switch
+                android:id="@+id/interviewQuestion_first"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1"
+                android:checked="true"
+                android:showText="true"
+                android:text="Difficulty Falling Asleep at Night?"
+                android:textOff="No"
+                android:textOn="Yes" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.3dp"
+                android:background="@android:color/black" />
+
+            <Switch
+                android:id="@+id/interviewQuestion_second"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1"
+                android:checked="true"
+                android:showText="true"
+                android:text="Trouble Failing Asleep Once Awake?"
+                android:textOff="No"
+                android:textOn="Yes" />
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/interview_question_view"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_below="@id/interview_questionfirstLinearLayout" />
+
+        <LinearLayout
+            android:id="@+id/interview_questionsecondLinearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_below="@id/interview_question_view"
+            android:background="@color/settingsButtonColor"
+            android:orientation="vertical"
+            android:padding="15dp"
+            android:weightSum="12">
+
+
+            <Button
+                android:id="@+id/interviewQuestion_saveBtn"
+                android:layout_width="299dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/sleep_button_2x"
+                android:text="Save"
+                android:textAllCaps="false"
+                android:textColor="@color/colorBlack" />
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+</FrameLayout>

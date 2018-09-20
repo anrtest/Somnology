@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Intro_TapTheOwl"
+    android:background="@drawable/background_2x">
+        <RelativeLayout
+            android:id="@+id/relativeIntro1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/intro_1_2x">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:weightSum="1">
+                <!--<LinearLayout-->
+                    <!--android:id="@+id/intro_pager1"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="0dp"-->
+                    <!--android:layout_weight=".1"-->
+                    <!--android:orientation="horizontal"-->
+                    <!--android:gravity="center"-->
+                    <!--android:background="@drawable/bg_2x">-->
+                    <!--<Button-->
+                        <!--android:id="@+id/intro1Btn1"-->
+                        <!--style="@style/introSliders"-->
+                        <!--android:background="@drawable/pagecontrol_selected_2x"/>-->
+                    <!--<Button-->
+                        <!--android:id="@+id/intro1Btn2"-->
+                        <!--style="@style/introSliders"-->
+                        <!--android:background="@drawable/pagecontrol_normal_2x"/>-->
+                    <!--<Button-->
+                        <!--android:id="@+id/intro1Btn3"-->
+                        <!--style="@style/introSliders"-->
+                        <!--android:background="@drawable/pagecontrol_normal_2x"/>-->
+                    <!--<Button-->
+                        <!--android:id="@+id/intro1Btn4"-->
+                        <!--style="@style/introSliders"-->
+                        <!--android:background="@drawable/pagecontrol_normal_2x"/>-->
+
+                <!--</LinearLayout>-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight=".40"
+                    android:weightSum="2">
+                    <ImageView
+                        android:id="@+id/intro1_owlIcon"
+                        android:layout_width="0dp"
+                        android:layout_weight=".7"
+                        android:layout_height="150dp"
+                        android:layout_marginLeft="35dp"
+                        android:adjustViewBounds="true"
+                        android:scaleType="fitXY"
+                        android:layout_marginBottom="-35dp"
+                        android:layout_gravity="center_horizontal|center_vertical"
+                        android:background="@drawable/owl_icon_2x"
+                        android:visibility="visible"/>
+                    <TextView
+                        style="@style/introSpeechText"
+                        android:id="@+id/introSpeechTxtView"
+                        android:layout_width="0dp"
+                        android:layout_weight="1.1"
+                        android:layout_height="120dp"
+                        android:layout_gravity="center_vertical|left"
+                        android:text="@string/intro1Text"
+                        android:alpha="1"
+                        android:background="@drawable/speech_bubble_2x"
+                        android:visibility="visible"/>
+
+                </LinearLayout>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight=".60"
+                    android:background="@null"
+                    />
+            </LinearLayout>
+
+
+            <Button
+                android:id="@+id/BtnInroTapTheOwlNext"
+                style="@style/OrangeButtonText"
+                android:layout_width="200dp"
+                android:layout_height="50dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="12dp"
+                android:background="@drawable/rounded_button_orange_2x"
+                android:text="Next"
+                android:textAllCaps="false"
+
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>

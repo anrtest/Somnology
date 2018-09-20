@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context="com.carobar.somnology.Header">
+
+    <Toolbar
+        android:id="@+id/my_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#062a36"
+        android:elevation="5dp"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+
+            android:orientation="horizontal"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:orientation="horizontal"
+                android:weightSum="4">
+                <Button
+                    android:id="@+id/back"
+                    android:layout_width="0dp"
+                    android:layout_weight=".7"
+                    android:layout_height="match_parent"
+                    android:text="Back"
+                    android:textAllCaps="false"
+                    android:background="@null"
+                    style="@style/WhiteText"
+                    android:drawableLeft="@drawable/back_arrow_2x"
+                    android:textSize="14sp"
+                    />
+
+
+
+                <TextView
+                    android:id="@+id/headerViewScreenText"
+                    style="@style/WhiteText"
+                    android:layout_width="0dp"
+                    android:layout_weight="2.6"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:textAlignment="center"
+                    android:textSize="18sp"
+                    />
+                <Button
+                    android:id="@+id/done"
+                    android:layout_width="0dp"
+                    android:layout_weight=".7"
+                    android:layout_height="match_parent"
+                    android:layout_gravity=""
+                    android:gravity="center_vertical"
+                    android:visibility="invisible"
+                    android:background="@null"
+                    android:text="Done"
+                    android:textAllCaps="false"
+                    style="@style/OrangeText"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </Toolbar>
+
+</android.support.constraint.ConstraintLayout>

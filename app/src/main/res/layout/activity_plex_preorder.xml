@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PlexPreorder">
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/earth_rotation"
+        android:layout_centerInParent="true"
+        android:scaleType="centerCrop"
+        android:adjustViewBounds="true"
+        android:alpha=".2"
+        />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <include
+            android:id="@+id/plexPreOrder_Header"
+            layout="@layout/activity_header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <include
+            android:id="@+id/plexPreOrderIncludeFooter"
+            layout="@layout/activity_bottom_navigation" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/plexPreOrder_Header"
+            android:layout_above="@id/plexPreOrderIncludeFooter">
+
+            <TextView
+                android:id="@+id/plexOrderTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="12dp"
+                android:layout_alignParentStart="true"
+                android:text="@string/plexOrder_Text"
+                android:lineSpacingExtra="10dp"
+                android:textSize="22dp"
+                android:textColor="@android:color/white"/>
+
+            <Button
+                android:id="@+id/plexOrder_orderBtn"
+                android:layout_width="280dp"
+                android:layout_height="65dp"
+                android:gravity="center"
+                android:layout_centerInParent="true"
+                android:background="@drawable/btn_order_2x"
+                android:layout_below="@id/plexOrderTextView"
+                android:layout_marginTop="70dp"
+                android:alpha="1"
+                />
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:scaleType="fitXY"
+                android:padding="15dp"
+                android:layout_marginBottom="15dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentEnd="true"
+                android:background="@drawable/plex_band_2x"
+                android:alpha="1"
+
+                />
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,358 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".stop_bang"
+    android:background="@drawable/background_2x">
+    <RelativeLayout
+        android:id="@+id/settingsConfig"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+        <include
+            android:id="@+id/stopBang_header"
+            layout="@layout/activity_header" />
+
+
+
+        <ScrollView
+            android:id="@+id/settingsConfig_ScrollView"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_below="@id/stopBang_header"
+            android:gravity="center"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="56dp">
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="15dp"
+                android:weightSum="12"
+                >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:text="@string/stopBang_header_message"
+                    android:layout_weight="2"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.3dp"
+                    android:background="@android:color/black"/>
+
+                <Switch
+                    android:id="@+id/stopBang_snore"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:text="Do You Snore?"
+                    android:layout_weight="1"
+                    android:layout_marginTop="10dp"
+                    android:textOff="No"
+                    android:textOn="Yes"
+                    android:checked="true"
+                    android:showText="true"
+                    />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.3dp"
+                    android:background="@android:color/black"/>
+
+                <!--<FrameLayout-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_gravity="center_horizontal"-->
+                    <!--android:layout_marginTop="100dp" >-->
+                    <!--<SlidingDrawer-->
+                        <!--android:id="@+id/slidingDrawer1"-->
+                        <!--android:layout_width="154dp"-->
+                        <!--android:layout_height="54dp"-->
+                        <!--android:background="@drawable/ios_retina_toggle_on_full"-->
+                        <!--android:content="@+id/content"-->
+                        <!--android:handle="@+id/handle"-->
+                        <!--android:orientation="horizontal" >-->
+                        <!--<ImageButton-->
+                            <!--android:id="@+id/handle"-->
+                            <!--android:layout_width="54dp"-->
+                            <!--android:layout_height="54dp"-->
+                            <!--android:background="#00000000"-->
+                            <!--android:src="@drawable/ios_retina_toggle_button" />-->
+                        <!--<ImageView-->
+                            <!--android:id="@+id/content"-->
+                            <!--android:layout_width="wrap_content"-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:src="@drawable/ios_retina_toggle_off" />-->
+                    <!--</SlidingDrawer>-->
+                    <!--<ImageView-->
+                        <!--android:id="@+id/imageView2"-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:src="@drawable/ios_retina_toggle_frame" />-->
+                <!--</FrameLayout>-->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.3dp"
+                    android:background="@android:color/black"/>
+
+
+                <Switch
+                    android:id="@+id/stopBang_feelTired"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:text="Do You Feel Tired or Sleepy Throughout the Day?"
+                    android:layout_weight="1"
+                    android:layout_marginTop="10dp"
+                    android:textOff="No"
+                    android:textOn="Yes"
+                    />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.3dp"
+                    android:background="@android:color/black"/>
+
+                <Switch
+                    android:id="@+id/stopBang_observeStopBreathing"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:text="Has Anyone Observed You Stop Breathing?"
+                    android:layout_weight="1"
+                    android:layout_marginTop="10dp"
+                    android:textOff="No"
+                    android:textOn="Yes"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.3dp"
+                    android:background="@android:color/black"/>
+
+                <Switch
+                    android:id="@+id/stopBang_highBloodPressure"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:text="Do You Have High Blood Pressure?"
+                    android:layout_weight="1"
+                    android:layout_marginTop="10dp"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.3dp"
+                    android:background="@android:color/black"/>
+
+                <Switch
+                    android:id="@+id/stopBang_ageOverFifty"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:text="Is Your Age Over 50?"
+                    android:layout_weight="1"
+                    android:layout_marginTop="10dp"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.3dp"
+                    android:background="@android:color/black"/>
+
+                <Switch
+                    android:id="@+id/stopBang_neckCircumferenceSixteenInch"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:text="Is Your Neck Circumference Over 16in?"
+                    android:layout_weight="1"
+                    android:layout_marginTop="10dp"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.3dp"
+                    android:background="@android:color/black"/>
+
+                <Switch
+                    android:id="@+id/stopBang_maleOrPostMenopausal"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:text="Are You Male or a Post-Menopausal Female?"
+                    android:layout_weight="1"
+                    android:layout_marginTop="10dp"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@android:color/black"/>
+
+                <Switch
+                    android:id="@+id/stopBang_bodyMassOverThirtyfive"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:text="Is Your Body Mass Index over 35?"
+                    android:layout_weight="1"
+                    android:layout_marginTop="10dp"/>
+
+                <Space
+                    android:layout_width="10dp"
+                    android:layout_height="5dp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:id="@+id/stopBang_calculateTextView"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="Calculate:"
+                        android:textColor="@color/colorWhite"
+                        android:layout_weight=".5"/>
+
+                    <TextView
+                        android:id="@+id/stopBang_volumeTextView"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="Metric"
+                        android:textColor="@color/colorWhite"
+                        android:layout_weight="1.5"
+                        android:textAlignment="textStart"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:orientation="horizontal"
+                    android:weightSum="5">
+
+                    <TextView
+                        android:id="@+id/stopBang_HeightTextView"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="Height:"
+                        android:textColor="@color/colorWhite"
+                        android:layout_weight="1"
+                        />
+
+                    <EditText
+                        android:id="@+id/stopBang_heightMeterText"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/textfield_dark_bg"
+                        android:layout_weight="1"/>
+
+                    <TextView
+                        android:id="@+id/stopBang_mTextView"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="m"
+                        android:textColor="@color/colorWhite"
+                        android:layout_weight=".5"
+                        />
+
+                    <EditText
+                        android:id="@+id/stopBang_heightCMText"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/textfield_dark_bg"
+                        android:layout_weight="1"/>
+
+                    <TextView
+                        android:id="@+id/stopBang_cmTextView"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="cm"
+                        android:textColor="@color/colorWhite"
+                        android:layout_weight=".5"
+                        />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:id="@+id/stopBang_weightTextView"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="Weight:"
+                        android:textColor="@color/colorWhite"
+                        android:layout_weight=".4"/>
+
+                    <EditText
+                        android:id="@+id/stopBang_weightEditTextView"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/textfield_dark_bg"
+                        android:layout_weight=".4"/>
+
+                    <TextView
+                        android:id="@+id/stopBang_weightVolumeTextView"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="Kg"
+                        android:textColor="@color/colorWhite"
+                        android:layout_weight="1.2"/>
+
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:id="@+id/stopBang_BMITextView"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="BMI:"
+                        android:textColor="@color/colorOrange"
+                        android:layout_weight=".2"/>
+
+                    <TextView
+                        android:id="@+id/stopBang_BMIEditTextView"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.8"
+                        android:text="0.0"
+                        android:textAlignment="textStart"
+                        android:textColor="@color/colorOrange"/>
+
+                </LinearLayout>
+                <Space
+                    android:layout_width="10dp"
+                    android:layout_height="25dp"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@android:color/black"/>
+
+                <Space
+                    android:layout_width="10dp"
+                    android:layout_height="25dp"/>
+
+                <Button
+                    android:id="@+id/stopBang_saveBtn"
+                    android:layout_width="300dp"
+                    android:layout_height="50dp"
+                    android:text="Save"
+                    android:textAllCaps="false"
+                    android:layout_gravity="center"
+                    android:textColor="@color/colorBlack"
+                    android:background="@drawable/sleep_button_2x"
+                    />
+            </LinearLayout>
+
+        </ScrollView>
+
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>

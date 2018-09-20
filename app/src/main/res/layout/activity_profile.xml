@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/background_2x"
+    tools:context="com.carobar.somnology.Profile"
+    tools:layout_editor_absoluteY="25dp">
+
+    <RelativeLayout
+        android:id="@+id/spFooter"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <include
+            android:id="@+id/profile_header"
+            layout="@layout/activity_header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            tools:layout_editor_absoluteX="221dp"
+            tools:layout_editor_absoluteY="0dp" />
+
+        <ScrollView
+            android:id="@+id/ScrollView_form"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/profile_header"
+            android:layout_above="@+id/resourceIncludeFooter"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:fillViewport="true"
+            android:gravity="center"
+            tools:layout_editor_absoluteX="8dp"
+            tools:layout_editor_absoluteY="56dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/profileInfoLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="11dp"
+                    android:layout_marginStart="11dp"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/profileHeaderTitle"
+                    android:textColor="@color/colorOrange" />
+
+                <EditText
+                    android:id="@+id/profileinfoLname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/profileinfoFname"
+                    android:layout_alignBottom="@+id/profileinfoFname"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginEnd="9dp"
+                    android:layout_marginRight="9dp"
+                    android:ems="10"
+                    android:hint="@string/lastName"
+                    android:inputType="textPersonName"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:id="@+id/profileinfoFname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/profileInfoLabel"
+                    android:layout_alignStart="@+id/profileInfoLabel"
+                    android:layout_below="@+id/profileInfoLabel"
+                    android:layout_marginTop="12dp"
+                    android:ems="10"
+                    android:hint="@string/firstName"
+                    android:inputType="textPersonName"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/profileInfoEmailLbl"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/profileinfoEmail"
+                    android:layout_alignBottom="@+id/profileinfoEmail"
+                    android:layout_alignLeft="@+id/profileinfoFname"
+                    android:layout_alignStart="@+id/profileinfoFname"
+                    android:text="@string/profileInfoEmail" />
+
+                <EditText
+                    android:id="@+id/profileinfoEmail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignEnd="@+id/profileinfoLname"
+                    android:layout_alignRight="@+id/profileinfoLname"
+                    android:layout_below="@+id/profileinfoLname"
+                    android:layout_marginTop="14dp"
+                    android:layout_toEndOf="@+id/profileInfoGenderLbl"
+                    android:layout_toRightOf="@+id/profileInfoGenderLbl"
+                    android:ems="10"
+                    android:inputType="textEmailAddress"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/profileInfobirthLbl"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/profileInfoEmailLbl"
+                    android:layout_alignStart="@+id/profileInfoEmailLbl"
+                    android:layout_below="@+id/profileinfoEmail"
+                    android:layout_marginTop="27dp"
+                    android:text="@string/profileInfoBirthday" />
+
+                <EditText
+                    android:id="@+id/profileinfoBirthdate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/profileInfobirthLbl"
+                    android:layout_alignBottom="@+id/profileInfobirthLbl"
+                    android:layout_alignEnd="@+id/profileinfoGender"
+                    android:layout_alignRight="@+id/profileinfoGender"
+                    android:layout_toEndOf="@+id/profileInfoLabel"
+                    android:layout_toRightOf="@+id/profileInfoLabel"
+                    android:clickable="true"
+                    android:ems="10"
+                    android:focusable="false"
+                    android:inputType="date" />
+
+                <TextView
+                    android:id="@+id/profileInfoGenderLbl"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/profileInfobirthLbl"
+                    android:layout_alignStart="@+id/profileInfobirthLbl"
+                    android:layout_below="@+id/profileInfobirthLbl"
+                    android:layout_marginTop="31dp"
+                    android:text="@string/profileInfoGender" />
+
+                <Spinner
+                    android:id="@+id/profileinfoGender"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignEnd="@+id/profileinfoEmail"
+                    android:layout_alignRight="@+id/profileinfoEmail"
+                    android:layout_alignTop="@+id/profileInfoGenderLbl"
+                    android:layout_toEndOf="@+id/profileInfobirthLbl"
+                    android:layout_toRightOf="@+id/profileInfobirthLbl"
+                    android:entries="@array/genderList"
+                    android:prompt="@string/gender_prompt"
+                    android:spinnerMode="dialog" />
+
+                <TextView
+                    android:id="@+id/profileinfoAddiinfoLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/profileInfoGenderLbl"
+                    android:layout_alignStart="@+id/profileInfoGenderLbl"
+                    android:layout_below="@+id/profileinfoGender"
+                    android:layout_marginTop="12dp"
+                    android:text="@string/profileinfoAdditional"
+                    android:textColor="@color/colorOrange" />
+
+                <EditText
+                    android:id="@+id/profileinfoMobileN"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignEnd="@+id/profileinfoGender"
+                    android:layout_alignLeft="@+id/profileinfoAddiinfoLabel"
+                    android:layout_alignRight="@+id/profileinfoGender"
+                    android:layout_alignStart="@+id/profileinfoAddiinfoLabel"
+                    android:layout_below="@+id/profileinfoAddiinfoLabel"
+                    android:layout_marginTop="19dp"
+                    android:ems="10"
+                    android:hint="@string/profileinfoMobile"
+                    android:inputType="phone"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:id="@+id/profileinfoAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignEnd="@+id/profileinfoBirthdate"
+                    android:layout_alignLeft="@+id/profileinfoMobileN"
+                    android:layout_alignRight="@+id/profileinfoBirthdate"
+                    android:layout_alignStart="@+id/profileinfoMobileN"
+                    android:layout_below="@+id/profileinfoMobileN"
+                    android:layout_marginTop="11dp"
+                    android:ems="10"
+                    android:hint="@string/profileinfoAddress"
+                    android:inputType="textPostalAddress"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:id="@+id/profileinfoCity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/profileinfoAddress"
+                    android:layout_alignStart="@+id/profileinfoAddress"
+                    android:layout_below="@+id/profileinfoAddress"
+                    android:layout_marginTop="8dp"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:text="@string/profileinfoCity"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:id="@+id/profileinfoState"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/profileinfoCity"
+                    android:layout_alignBottom="@+id/profileinfoCity"
+                    android:layout_alignEnd="@+id/profileinfoGender"
+                    android:layout_alignRight="@+id/profileinfoGender"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:text="@string/profileinfoState"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:id="@+id/profileinfoZipcode"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignEnd="@+id/profileinfoBirthdate"
+                    android:layout_alignLeft="@+id/profileinfoCity"
+                    android:layout_alignRight="@+id/profileinfoBirthdate"
+                    android:layout_alignStart="@+id/profileinfoCity"
+                    android:layout_below="@+id/profileinfoCity"
+                    android:layout_marginTop="11dp"
+                    android:ems="10"
+                    android:hint="@string/profileinfoZip"
+                    android:inputType="number"
+                    android:textSize="14sp" />
+
+                <Button
+                    android:id="@+id/profileinfoMedicalproblem"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignEnd="@+id/profileinfoZipcode"
+                    android:layout_alignLeft="@+id/profileinfoZipcode"
+                    android:layout_alignRight="@+id/profileinfoZipcode"
+                    android:layout_alignStart="@+id/profileinfoZipcode"
+                    android:layout_below="@+id/profileinfoZipcode"
+                    android:layout_gravity="start"
+                    android:layout_marginTop="14dp"
+                    android:background="@android:color/transparent"
+                    android:drawableRight="@drawable/next_arrow_2x"
+                    android:text="@string/profileinfoMedical"
+                    android:textAlignment="viewStart" />
+
+                <Button
+                    android:id="@+id/profileinfoMedication"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignEnd="@+id/profileinfoBirthdate"
+                    android:layout_alignLeft="@+id/profileinfoMedicalproblem"
+                    android:layout_alignRight="@+id/profileinfoBirthdate"
+                    android:layout_alignStart="@+id/profileinfoMedicalproblem"
+                    android:layout_below="@+id/profileinfoMedicalproblem"
+                    android:layout_gravity="start"
+                    android:layout_marginTop="9dp"
+                    android:background="@android:color/transparent"
+                    android:drawableRight="@drawable/next_arrow_2x"
+                    android:text="@string/profileinfoMedication"
+                    android:textAlignment="viewStart"
+                    tools:layout_editor_absoluteX="16dp"
+                    tools:layout_editor_absoluteY="994dp" />
+
+                <Button
+                    android:id="@+id/profileinfoChangepassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignEnd="@+id/profileinfoBirthdate"
+                    android:layout_alignLeft="@+id/profileinfoMedication"
+                    android:layout_alignRight="@+id/profileinfoBirthdate"
+                    android:layout_alignStart="@+id/profileinfoMedication"
+                    android:layout_below="@+id/profileinfoMedication"
+                    android:layout_gravity="start"
+                    android:layout_marginTop="15dp"
+                    android:background="@android:color/transparent"
+                    android:text="@string/profileinfoChangePassword"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorOrange"
+                    tools:layout_editor_absoluteX="16dp"
+                    tools:layout_editor_absoluteY="994dp" />
+
+            </RelativeLayout>
+        </ScrollView>
+
+        <!--<include-->
+            <!--android:id="@+id/profile_footer"-->
+            <!--layout="@layout/activity_footer"-->
+            <!--tools:layout_editor_absoluteX="0dp"-->
+            <!--tools:layout_editor_absoluteY="0dp" />-->
+
+
+        <!--<include-->
+            <!--android:id="@+id/profile_SleepLogFooter"-->
+            <!--layout="@layout/activity_sleeplogfooter" />-->
+        <include
+            android:id="@+id/resourceIncludeFooter"
+            layout="@layout/activity_bottom_navigation"/>
+
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>

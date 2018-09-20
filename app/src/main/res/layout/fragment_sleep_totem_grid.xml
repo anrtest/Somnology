@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".sleep_totem_grid"
+    android:background="@drawable/background_2x">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <RelativeLayout
+        android:id="@+id/sleeptotem_GridRelativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        >
+
+        <include
+            android:id="@+id/sleep_totem_grid_header"
+            layout="@layout/activity_header" />
+
+        <GridView
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/gridview"
+            android:numColumns="auto_fit"
+            android:gravity="center"
+            android:columnWidth="@dimen/_100sdp"
+            android:stretchMode="columnWidth"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_above="@id/sleepTotemsGridIncludeFooter"
+            android:layout_below="@id/sleep_totem_grid_header">
+
+
+        </GridView>
+
+        <!--<ScrollView-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_above="@id/sleepTotemsGridIncludeFooter"-->
+            <!--android:layout_below="@id/sleep_totem_grid_header">-->
+
+
+            <!--<LinearLayout-->
+                <!--android:id="@+id/sleep_totemgridLinearLayout"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:layout_below="@id/sleep_totem_grid_header"-->
+                <!--android:background="@color/settingsButtonColor"-->
+                <!--android:orientation="vertical"-->
+                <!--android:padding="15dp">-->
+
+                <!--&lt;!&ndash;<GridView xmlns:android="http://schemas.android.com/apk/res/android"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:id="@+id/gridview"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:layout_width="match_parent"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:layout_height="match_parent"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:layout_gravity="center"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:columnWidth="100dp"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:gravity="center"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:minHeight="90dp"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:numColumns="auto_fit"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:stretchMode="columnWidth" />&ndash;&gt;-->
+                <!--<GridView-->
+                    <!--xmlns:android="http://schemas.android.com/apk/res/android"-->
+                    <!--android:id="@+id/gridview"-->
+                    <!--android:numColumns="auto_fit"-->
+                    <!--android:gravity="center"-->
+                    <!--android:columnWidth="100dp"-->
+                    <!--android:stretchMode="columnWidth"-->
+                    <!--android:layout_width="fill_parent"-->
+                    <!--android:layout_height="fill_parent" >-->
+
+                <!--</GridView>-->
+            <!--</LinearLayout>-->
+        <!--</ScrollView>-->
+
+        <include
+            android:id="@+id/sleepTotemsGridIncludeFooter"
+            layout="@layout/activity_bottom_navigation"/>
+
+    </RelativeLayout>
+
+
+</FrameLayout>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/background_2x"
+    tools:context="com.carobar.somnology.resources"
+    tools:layout_editor_absoluteY="25dp">
+
+    <RelativeLayout
+        android:id="@+id/resourceHederFooterLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
+
+        <!--<include-->
+            <!--android:id="@+id/resourceIncludeFooter"-->
+            <!--layout="@layout/activity_footer"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_alignParentLeft="true"-->
+            <!--android:layout_alignParentStart="true"-->
+            <!--android:layout_alignTop="@+id/resourceIncludefooterOwlIcon"-->
+            <!--android:layout_marginTop="9dp" />-->
+        <include
+            android:id="@+id/resourceIncludeFooter"
+            layout="@layout/activity_bottom_navigation"/>
+
+
+        <include
+            android:id="@+id/resourceIncludeHeader"
+            layout="@layout/activity_header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <de.halfbit.pinnedsection.PinnedSectionListView
+            android:id="@+id/resourceListView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/resourceIncludeFooter"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/resourceIncludeHeader" >
+
+        </de.halfbit.pinnedsection.PinnedSectionListView>
+
+        <!--<include-->
+            <!--android:id="@+id/resourceIncludefooterOwlIcon"-->
+            <!--layout="@layout/activity_sleeplogfooter"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_below="@+id/resourceIncludeHeader"-->
+            <!--android:layout_centerHorizontal="true"-->
+            <!--android:layout_marginBottom="0dp" />-->
+
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>

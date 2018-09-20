@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_2x"
+    tools:context=".Store">
+
+    <RelativeLayout
+        android:id="@+id/store_mainRelativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include
+            android:id="@+id/store_header"
+            layout="@layout/activity_header" />
+
+
+        <include
+            android:id="@+id/storeIncludeFooter"
+            layout="@layout/activity_bottom_navigation" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/storeIncludeFooter"
+            android:layout_below="@id/store_header">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/store_header"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal"
+                    android:weightSum="3">
+
+
+                <TextView
+                    android:id="@+id/Store_sleepTotemsTxtView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginStart="8dp"
+                    android:text="Sleep Totems"
+                    android:textAlignment="viewStart"
+                    android:textColor="@android:color/white"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:layout_weight="2.4"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.497"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                    <Button
+                    android:id="@+id/storeSleeptotems_seeall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_gravity="start"
+                    android:layout_weight=".6"
+                    android:background="@color/settingsButtonColor"
+                    android:drawableRight="@drawable/next_arrow_2x"
+                    android:text="See All"
+                    android:textAlignment="viewStart"
+                    android:textAllCaps="false"
+                    android:textSize="@dimen/_10sdp" />
+
+
+
+                </LinearLayout>
+
+
+                <HorizontalScrollView
+                    android:id="@+id/store_horizontalScrollView"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_120sdp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@id/Store_sleepTotemsTxtView">
+
+                    <LinearLayout
+                        android:id="@+id/store_image_container"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/_100sdp"
+                        android:clickable="true"
+                        android:orientation="horizontal">
+
+                    </LinearLayout>
+                </HorizontalScrollView>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="@android:color/black"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <TextView
+                    android:id="@+id/store_Soundsacpes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginStart="8dp"
+                    android:text="Soundscapes"
+                    android:textColor="@android:color/white"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:layout_weight="2.4"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.497"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <Button
+                    android:id="@+id/storeSoundscapes_seeall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_gravity="start"
+                    android:layout_weight=".6"
+                    android:background="@color/settingsButtonColor"
+                    android:drawableRight="@drawable/next_arrow_2x"
+                    android:text="See All"
+                    android:textAlignment="viewStart"
+                    android:textAllCaps="false"
+                    android:textSize="@dimen/_10sdp" />
+
+            </LinearLayout>
+
+
+                <HorizontalScrollView
+                    android:id="@+id/store_horizontalScrollView_sound"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_120sdp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@id/store_Soundsacpes">
+
+                    <LinearLayout
+                        android:id="@+id/store_image_container_sound"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                    </LinearLayout>
+                </HorizontalScrollView>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="@android:color/black"/>
+                <TextView
+                    android:id="@+id/store_BuyStarsTxtView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/_20sdp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="20dp"
+                    android:text="Buy Stars"
+                    android:textAlignment="center"
+                    android:textColor="@android:color/white"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    />
+
+
+                <LinearLayout
+                    android:id="@+id/store_image_container_stars"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginRight="2dp"
+                    android:weightSum="3">
+
+                    <LinearLayout
+                        android:id="@+id/store_image_container_starsVertical"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:layout_weight="1"
+                        android:layout_marginLeft="2dp">
+                        <ImageButton
+                            android:id="@+id/storeSingleStarImageView"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_100sdp"
+                            android:scaleType="fitCenter"
+                            android:padding="40dp"
+                            app:srcCompat="@drawable/singlestar_2x"
+                            android:background="@drawable/background_2x"/>
+
+                        <TextView
+                            android:id="@+id/store_singleStarTextView"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_15sdp"
+                            android:text="100 Stars"
+                            android:layout_marginBottom="@dimen/_5sdp"
+                            android:textAlignment="center"
+                            android:textSize="@dimen/_12sdp" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/store_image_container_starsVertical1"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:layout_weight="1"
+                        android:layout_marginLeft="2dp">
+
+                        <ImageButton
+                            android:id="@+id/storeTwoStarImageView"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_100sdp"
+                            android:scaleType="fitCenter"
+                            android:padding="40dp"
+                            app:srcCompat="@drawable/twostar_3x"
+                            android:background="@drawable/background_2x"/>
+
+                        <TextView
+                            android:id="@+id/store_twoStarTextView"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_15sdp"
+                            android:text="250 Stars"
+                            android:layout_marginBottom="@dimen/_5sdp"
+                            android:textAlignment="center"
+                            android:textSize="@dimen/_12sdp"
+                            />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/store_image_container_starsVertical2"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:layout_weight="1"
+                        android:layout_marginLeft="2dp">
+
+
+                        <ImageButton
+                            android:id="@+id/storeThreeStarImageView"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_100sdp"
+                            android:scaleType="fitCenter"
+                            android:padding="40dp"
+                            app:srcCompat="@drawable/uthreestar_3x"
+                            android:background="@drawable/background_2x"/>
+
+                        <TextView
+                            android:id="@+id/store_threeStarTextView"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_15sdp"
+                            android:layout_marginBottom="@dimen/_5sdp"
+                            android:text="500 Stars"
+                            android:textAlignment="center"
+                            android:textSize="@dimen/_12sdp"
+                             />
+                    </LinearLayout>
+                </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="@android:color/black"/>
+
+            </LinearLayout>
+        </ScrollView>
+    </RelativeLayout>
+
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.carobar.somnology.Signup"
+    android:background="@drawable/background_2x">
+
+    <include
+        android:id="@+id/signUp_Header"
+        layout="@layout/activity_header"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/SignUpimageView"
+        android:layout_width="0dp"
+        android:layout_height="225dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="24dp"
+        android:contentDescription="@string/signInImageContent"
+        android:paddingLeft="64dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/signUp_Header"
+        app:srcCompat="@drawable/logo_2x" />
+
+
+    <EditText
+        android:id="@+id/SignUpEmail"
+        android:layout_width="0dp"
+        android:layout_height="57dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="4dp"
+        android:background="@drawable/textfield_dark_bg_2x"
+        android:ems="10"
+        android:hint="@string/email_addressText"
+        android:inputType="textEmailAddress"
+        android:textAlignment="center"
+        android:textColor="#20B2AA"
+        android:textColorHint="#20B2AA"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/SignUpimageView" />
+    <TextView
+        android:id="@+id/signup_EmailNotify"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@id/SignUpEmail"
+        android:visibility="invisible"
+        android:textColor="@color/colorWrongInfo"
+        />
+
+    <EditText
+        android:id="@+id/SignUpPassword"
+        android:layout_width="0dp"
+        android:layout_height="57dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/textfield_dark_bg_2x"
+        android:ems="10"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:textAlignment="center"
+        android:textColor="#20B2AA"
+        android:textColorHint="#20B2AA"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/SignUpEmail" />
+    <TextView
+        android:id="@+id/signup_PasswordNotify"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@id/SignUpPassword"
+        android:visibility="invisible"
+        android:textColor="@color/colorWrongInfo"
+        />
+
+    <Button
+        android:id="@+id/btnSignupCreateAccount"
+        android:layout_width="0dp"
+        android:layout_height="57dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="9dp"
+        android:background="@drawable/textfield_large_light_2x"
+        android:backgroundTint="?attr/colorControlActivated"
+        android:text="Create Account"
+        android:textAllCaps="false"
+        android:textColor="@android:color/background_dark"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/SignUpPassword"
+        tools:targetApi="lollipop" />
+
+    <TextView
+        android:id="@+id/SignUptext"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="20dp"
+        android:paddingLeft="60dp"
+        android:paddingRight="55dp"
+        android:text="By choosing 'Create Account' you are indidicating that you have read and agree to our Terms of Use and Privacy Policy."
+        android:textAlignment="center"
+        android:textColor="@android:color/white"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnSignupCreateAccount" />
+
+
+</android.support.constraint.ConstraintLayout>
