@@ -33,11 +33,11 @@
             android:name=".MainActivity"
             android:parentActivityName=".MainActivity"
             android:screenOrientation="portrait">
-            <intent-filter>
+           <!-- <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+            </intent-filter>-->
 
             <meta-data
                 android:name="android.support.Parent_ACTIVITY"
@@ -127,7 +127,14 @@
         <activity android:name=".epworth_sleepiness" />
         <activity android:name=".disease_name" />
         <activity android:name=".disease_pdf_viewer" />
-        <activity android:name=".Average_hours_slept"></activity>
+        <activity android:name=".Average_hours_slept" />
+        <activity android:name=".shankit.Main2Activity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>
