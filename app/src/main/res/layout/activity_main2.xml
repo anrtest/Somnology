@@ -4,14 +4,54 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorWhite"
+    android:background="@color/colorBlue"
     tools:context=".shankit.Main2Activity">
 
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/rv_screen1"
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:nestedScrollingEnabled="false" />
+        android:layout_height="match_parent">
+        <include
+            android:id="@+id/plexPreOrder_Header"
+            layout="@layout/activity_header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <include
+            android:id="@+id/plexPreOrderIncludeFooter"
+            layout="@layout/activity_bottom_navigation" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/plexPreOrder_Header"
+            android:layout_above="@id/plexPreOrderIncludeFooter">
+
+
+
+
+            <TextView
+                android:id="@+id/tv_question"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="How many times did you wake up?"
+                android:textColor="@color/colorWhite"
+                />
+
+
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_screen1"
+                android:layout_below="@+id/tv_question"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="horizontal"
+                android:scrollbarSize="@dimen/_2sdp"
+                android:nestedScrollingEnabled="false" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
 
 
 </RelativeLayout>

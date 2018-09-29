@@ -4,21 +4,15 @@
     android:layout_height="wrap_content"
     android:layout_margin="@dimen/_2sdp"
     android:orientation="vertical"
-    android:background="@color/appBlue"
-    >
 
-   <!-- <android.support.v7.widget.AppCompatRadioButton
-        android:id="@+id/rb_viewHolder"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="@dimen/_10sdp" />
--->
+    >
 
     <RadioButton
         android:id="@+id/rb_viewHolder"
         android:layout_width="wrap_content"
         android:layout_height="0dp"
         android:layout_weight="1"
+
         android:backgroundTint="@color/colorOrange"
          />
 
@@ -28,6 +22,9 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:text="0"
+        android:textColor="@color/colorWhite"
+
+        android:layout_marginBottom="@dimen/_20sdp"
          />
 
 </LinearLayout>

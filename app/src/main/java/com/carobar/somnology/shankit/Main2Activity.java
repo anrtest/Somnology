@@ -28,6 +28,7 @@ public class Main2Activity extends AppCompatActivity {
         adapter = new HourSelectionRecyclerAdapter(activity);
         final LinearLayoutManager layoutManager = new LinearLayoutManager(activity);
         layoutManager.setOrientation(LinearLayout.HORIZONTAL);
+        recyclerView.setVerticalScrollBarEnabled(true);
         recyclerView.setLayoutManager(layoutManager);
         recyclerView.setHasFixedSize(true);
         recyclerView.setAdapter(adapter);
