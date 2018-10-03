@@ -1,9 +1,11 @@
 package com.carobar.somnology.shankit;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.content.res.TypedArray;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.CardView;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
@@ -25,6 +27,7 @@ public class Main2Activity extends Activity {
     private Activity activity;
     private TextView title;
     private Button nextBtn;
+    private CardView cardView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,6 +35,7 @@ public class Main2Activity extends Activity {
         setContentView(R.layout.activity_main2);
         activity = Main2Activity.this;
         recyclerView = findViewById(R.id.rv_screen1);
+        cardView = findViewById(R.id.cardView);
         title = findViewById(R.id.headerViewScreenText);
         title.setText("Sleep Summary");
         nextBtn = findViewById(R.id.done);
@@ -46,6 +50,12 @@ public class Main2Activity extends Activity {
         recyclerView.setAdapter(adapter);
         adapter.notifyDataSetChanged();
         dummyData();
+        cardView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(activity, SetTimeValueActivity.class));
+            }
+        });
     }
 
     private void dummyData() {

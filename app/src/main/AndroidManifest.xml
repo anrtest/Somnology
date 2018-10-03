@@ -17,8 +17,8 @@
         android:supportsRtl="true"
         android:testOnly="false"
         android:theme="@style/Theme.AppCompat.NoActionBar"
-        tools:remove="true"
-        tools:ignore="GoogleAppIndexingWarning">
+        tools:ignore="GoogleAppIndexingWarning"
+        tools:remove="true">
 
         <!-- android:theme="@style/AppTheme" -->
         <activity
@@ -34,11 +34,14 @@
             android:name=".MainActivity"
             android:parentActivityName=".MainActivity"
             android:screenOrientation="portrait">
-           <!-- <intent-filter>
+
+            <!--
+            <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>-->
+            </intent-filter>
+            -->
 
             <meta-data
                 android:name="android.support.Parent_ACTIVITY"
@@ -56,9 +59,11 @@
         <activity
             android:name=".Header"
             android:screenOrientation="portrait" />
-  <!--      <activity
+        <!--
+            <activity
             android:name=".Settings"
-            android:screenOrientation="portrait" />-->
+            android:screenOrientation="portrait" />
+        -->
         <activity
             android:name=".webPage"
             android:screenOrientation="portrait" />
@@ -129,15 +134,21 @@
         <activity android:name=".disease_name" />
         <activity android:name=".disease_pdf_viewer" />
         <activity android:name=".Average_hours_slept" />
-        <activity android:name=".shankit.Main2Activity"
-         android:theme="@style/Theme.AppCompat.NoActionBar"
-        android:screenOrientation="portrait" >
+        <activity
+            android:name=".shankit.Main2Activity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".shankit.SetTimeValueActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.NoActionBar"
+            />
     </application>
 
 </manifest>
