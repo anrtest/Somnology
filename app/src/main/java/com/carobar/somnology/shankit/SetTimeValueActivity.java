@@ -25,7 +25,8 @@ public class SetTimeValueActivity extends AppCompatActivity {
     private TextView tv_answer1, tv_answer2;
     private Button nextBtn;
     private CardView cardView, cardView2, cardView3;
-    private Button button1, button2, button3, button4, button5, button6, button7, button8, button9, button10;
+    private TextView buttons[] = new TextView[10];
+    private boolean isButtonRed[] = new boolean[]{false, false, false, false, false, false, false, false, false, false};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,17 +38,18 @@ public class SetTimeValueActivity extends AppCompatActivity {
         cardView3 = findViewById(R.id.cardView3);
         tv_answer1 = findViewById(R.id.tv_answer1);
         tv_answer2 = findViewById(R.id.tv_answer2);
-        button1 = findViewById(R.id.button1);
-        button2 = findViewById(R.id.button2);
-        button3 = findViewById(R.id.button3);
-        button4 = findViewById(R.id.button4);
-        button5 = findViewById(R.id.button5);
-        button6 = findViewById(R.id.button6);
-        button7 = findViewById(R.id.button7);
-        button8 = findViewById(R.id.button8);
-        button9 = findViewById(R.id.button9);
-        button10 = findViewById(R.id.button10);
-        setButton(new Button[]{button1, button2, button3, button4, button5, button6, button7, button8, button9, button10});
+        buttons[0] = findViewById(R.id.button1);
+        buttons[1] = findViewById(R.id.button2);
+        buttons[2] = findViewById(R.id.button3);
+        buttons[3] = findViewById(R.id.button4);
+        buttons[4] = findViewById(R.id.button5);
+        buttons[5] = findViewById(R.id.button6);
+        buttons[6] = findViewById(R.id.button7);
+        buttons[7] = findViewById(R.id.button8);
+        buttons[8] = findViewById(R.id.button9);
+        buttons[9] = findViewById(R.id.button10);
+
+        setButton(buttons);
         // TODO Auto-generated method stub
         final Calendar mcurrentTime = Calendar.getInstance();
         final int hour = mcurrentTime.get(Calendar.HOUR_OF_DAY);
@@ -93,29 +95,25 @@ public class SetTimeValueActivity extends AppCompatActivity {
         });
     }
 
-    private void setButton(Button buttons[]) {
-        for (final Button button : buttons){
-            button.setOnClickListener(new View.OnClickListener() {
+    private void setButton(final TextView buttons[]) {
+        for (int i = 0; i < buttons.length; i++){
+            final int finalI = i;
+            buttons[i].setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     Log.e("hi--------->", "clicked");
-                    Drawable drawable = button.getBackground();
-                    if (drawable == ContextCompat.getDrawable(activity, R.drawable.rounded_button_bg_white)){
+                    Drawable drawable = buttons[finalI].getBackground();
+                    if (!isButtonRed[finalI]) {
                         Log.e("hi------>", "white to orange");
-                        button.setBackgroundResource(R.drawable.rounded_button_bg_white_orange_border);
-                    }else {
-                        Log.e("hi------>", "orange to white");
-                        button.setBackgroundResource(R.drawable.rounded_button_bg_white);
+                        buttons[finalI].setBackgroundResource(R.drawable.rounded_button_bg_white_orange_border);
+                    }else{
+                        Log.e("hi------>", "  <---white to orange");
+                        buttons[finalI].setBackgroundResource(R.drawable.rounded_button_bg_white);
                     }
-                    Drawable drawable2 = button.getBackground();
-                    if (drawable2 == ContextCompat.getDrawable(activity, R.drawable.rounded_button_bg_white)){
-                        Log.e("hi--------->", "equal white");
-                    } if (drawable2 == ContextCompat.getDrawable(activity, R.drawable.rounded_button_bg_white_orange_border)){
-                        Log.e("hi--------->", "equal orange");
-                    }
+                    isButtonRed[finalI] = !isButtonRed[finalI];
+
                 }
             });
-
         }
     }
 

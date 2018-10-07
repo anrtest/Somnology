@@ -26,352 +26,399 @@
             android:layout_height="wrap_content"
             android:layout_above="@id/plexPreOrderIncludeFooter"
             android:layout_below="@id/plexPreOrder_Header">
-<!--
 
-            <android.support.v4.widget.NestedScrollView
+
+            <ScrollView
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
--->
+                android:layout_height="wrap_content">
 
-                <TextView
-                    android:id="@+id/tv_question1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="@dimen/_5sdp"
-                    android:text="What Time Did You Wake Up?"
-                    android:textColor="@color/colorWhite" />
-
-
-                <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
-                    android:id="@+id/cardView"
+                <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/tv_question1"
-                    android:layout_margin="@dimen/_5sdp"
-                    android:orientation="vertical"
-                    android:paddingTop="@dimen/_10sdp"
-                    android:paddingBottom="@dimen/_10sdp"
-                    app:cardBackgroundColor="@color/appBlue">
+                    android:layout_height="wrap_content">
 
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
+                    <TextView
+                        android:id="@+id/tv_question1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/_5sdp"
+                        android:text="What Time Did You Wake Up?"
+                        android:textColor="@color/colorWhite" />
 
 
-                        <LinearLayout
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:layout_weight="9"
-                            android:orientation="vertical">
-
-
-                            <TextView
-                                android:id="@+id/tv_answer1"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_centerHorizontal="true"
-                                android:layout_margin="@dimen/_5sdp"
-                                android:text="--:--"
-                                android:textColor="@color/colorOrange"
-                                android:textSize="@dimen/_14sdp" />
-
-
-                        </LinearLayout>
-
-                        <LinearLayout
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:layout_weight="1">
-
-                            <ImageView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:background="@drawable/next_arrow_2x"
-                                android:backgroundTint="@color/colorWhite"
-                                android:padding="@dimen/_5sdp" />
-
-
-                        </LinearLayout>
-
-
-                    </LinearLayout>
-
-
-                </android.support.v7.widget.CardView>
-
-
-                <TextView
-                    android:id="@+id/tv_question2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/cardView"
-                    android:layout_margin="@dimen/_5sdp"
-                    android:text="How Long Were You Up?"
-                    android:textColor="@color/colorWhite" />
-
-
-                <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
-                    android:id="@+id/cardView2"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/tv_question2"
-                    android:layout_margin="@dimen/_5sdp"
-                    android:orientation="vertical"
-                    android:paddingTop="@dimen/_10sdp"
-                    android:paddingBottom="@dimen/_10sdp"
-                    app:cardBackgroundColor="@color/appBlue">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
-
-
-                        <LinearLayout
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:layout_weight="9"
-                            android:orientation="vertical">
-
-
-                            <TextView
-                                android:id="@+id/tv_answer2"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_centerHorizontal="true"
-                                android:layout_margin="@dimen/_5sdp"
-                                android:text="--:--"
-                                android:textColor="@color/colorOrange"
-                                android:textSize="@dimen/_14sdp" />
-
-
-                        </LinearLayout>
-
-                        <LinearLayout
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:layout_weight="1">
-
-                            <ImageView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:background="@drawable/next_arrow_2x"
-                                android:backgroundTint="@color/colorWhite"
-                                android:padding="@dimen/_5sdp" />
-
-
-                        </LinearLayout>
-
-
-                    </LinearLayout>
-
-
-                </android.support.v7.widget.CardView>
-
-                <TextView
-                    android:id="@+id/tv_question3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/cardView2"
-                    android:layout_margin="@dimen/_5sdp"
-                    android:text="Reason For Waking Up:"
-                    android:textColor="@color/colorWhite" />
-
-
-                <android.support.v7.widget.CardView
-                    xmlns:android="http://schemas.android.com/apk/res/android"
-                    android:id="@+id/cardView3"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/tv_question3"
-                    android:layout_margin="@dimen/_5sdp"
-                    android:orientation="vertical"
-                    android:paddingTop="@dimen/_10sdp"
-                    android:paddingBottom="@dimen/_10sdp"
-                    app:cardBackgroundColor="@color/appBlue">
-
-                    <LinearLayout
+                    <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                        android:id="@+id/cardView"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="vertical">
+                        android:layout_below="@+id/tv_question1"
+                        android:layout_margin="@dimen/_5sdp"
+                        android:orientation="vertical"
+                        android:paddingTop="@dimen/_10sdp"
+                        android:paddingBottom="@dimen/_10sdp"
+                        app:cardBackgroundColor="@color/appBlue">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_weight="9"
+                                android:orientation="vertical">
+
+
+                                <TextView
+                                    android:id="@+id/tv_answer1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_margin="@dimen/_5sdp"
+                                    android:text="--:--"
+                                    android:textColor="@color/colorOrange"
+                                    android:textSize="@dimen/_14sdp" />
+
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_weight="1">
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/next_arrow_2x"
+                                    android:backgroundTint="@color/colorWhite"
+                                    android:padding="@dimen/_5sdp" />
+
+
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+
+                    </android.support.v7.widget.CardView>
+
+
+                    <TextView
+                        android:id="@+id/tv_question2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/cardView"
+                        android:layout_margin="@dimen/_5sdp"
+                        android:text="How Long Were You Up?"
+                        android:textColor="@color/colorWhite" />
+
+
+                    <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                        android:id="@+id/cardView2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv_question2"
+                        android:layout_margin="@dimen/_5sdp"
+                        android:orientation="vertical"
+                        android:paddingTop="@dimen/_10sdp"
+                        android:paddingBottom="@dimen/_10sdp"
+                        app:cardBackgroundColor="@color/appBlue">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_weight="9"
+                                android:orientation="vertical">
+
+
+                                <TextView
+                                    android:id="@+id/tv_answer2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_margin="@dimen/_5sdp"
+                                    android:text="--:--"
+                                    android:textColor="@color/colorOrange"
+                                    android:textSize="@dimen/_14sdp" />
+
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_weight="1">
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/next_arrow_2x"
+                                    android:backgroundTint="@color/colorWhite"
+                                    android:padding="@dimen/_5sdp" />
+
+
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+
+                    </android.support.v7.widget.CardView>
+
+                    <TextView
+                        android:id="@+id/tv_question3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/cardView2"
+                        android:layout_margin="@dimen/_5sdp"
+                        android:text="Reason For Waking Up:"
+                        android:textColor="@color/colorWhite" />
+
+
+                    <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                        android:id="@+id/cardView3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv_question3"
+                        android:layout_margin="@dimen/_5sdp"
+                        android:orientation="vertical"
+                        android:padding="@dimen/_10sdp"
+                        android:paddingTop="@dimen/_10sdp"
+                        android:paddingBottom="@dimen/_10sdp"
+                        app:cardBackgroundColor="@color/appBlue">
 
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:orientation="horizontal">
+                            android:orientation="vertical">
 
-                            <Button
-android:id="@+id/button1"
-                                android:layout_width="wrap_content"
+                            <LinearLayout
+                                android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:layout_marginTop="@dimen/_5sdp"
-                                android:layout_marginBottom="@dimen/_5sdp"
-                                android:background="@drawable/rounded_button_bg_white"
-                                android:padding="10dp"
-                                android:text="Bathroom"
-                                android:textColor="@color/colorBlue" />
+                                android:orientation="horizontal"
+                                android:weightSum="3">
 
-                            <Button
-                                android:id="@+id/button2"
-                                android:layout_width="wrap_content"
+                                <TextView
+                                    android:id="@+id/button1"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/_5sdp"
+                                    android:layout_marginBottom="@dimen/_5sdp"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/rounded_button_bg_white"
+                                    android:padding="10dp"
+                                    android:paddingStart="@dimen/_10sdp"
+                                    android:paddingEnd="@dimen/_10sdp"
+                                    android:text="Bathroom"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorBlue" />
+
+                                <TextView
+                                    android:id="@+id/button2"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="@dimen/_10sdp"
+                                    android:layout_marginTop="@dimen/_5sdp"
+                                    android:layout_marginBottom="@dimen/_5sdp"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/rounded_button_bg_white"
+                                    android:padding="10dp"
+                                    android:paddingStart="@dimen/_10sdp"
+                                    android:paddingEnd="@dimen/_10sdp"
+                                    android:text="Partner"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorBlue" />
+
+                                <TextView
+                                    android:id="@+id/button3"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="@dimen/_10sdp"
+                                    android:layout_marginTop="@dimen/_5sdp"
+                                    android:layout_marginBottom="@dimen/_5sdp"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/rounded_button_bg_white"
+                                    android:padding="10dp"
+                                    android:paddingStart="@dimen/_10sdp"
+                                    android:paddingEnd="@dimen/_10sdp"
+                                    android:text="Water"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorBlue" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:layout_marginStart="@dimen/_10sdp"
-                                android:layout_marginTop="@dimen/_5sdp"
-                                android:layout_marginBottom="@dimen/_5sdp"
-                                android:background="@drawable/rounded_button_bg_white"
-                                android:padding="10dp"
-                                android:text="Partner"
-                                android:textColor="@color/colorBlue" />
+                                android:orientation="horizontal"
+                                android:weightSum="3">
 
-                            <Button
-                                android:id="@+id/button3"
-                                android:layout_width="wrap_content"
+                                <TextView
+                                    android:id="@+id/button4"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/_5sdp"
+                                    android:layout_marginBottom="@dimen/_5sdp"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/rounded_button_bg_white"
+                                    android:padding="10dp"
+                                    android:paddingStart="@dimen/_10sdp"
+                                    android:paddingEnd="@dimen/_10sdp"
+                                    android:text="Phone"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorBlue" />
+
+                                <TextView
+                                    android:id="@+id/button5"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="@dimen/_10sdp"
+                                    android:layout_marginTop="@dimen/_5sdp"
+                                    android:layout_marginBottom="@dimen/_5sdp"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/rounded_button_bg_white"
+                                    android:padding="10dp"
+                                    android:paddingStart="@dimen/_10sdp"
+                                    android:paddingEnd="@dimen/_10sdp"
+                                    android:text="Pain"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorBlue" />
+
+                                <TextView
+                                    android:id="@+id/button6"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="@dimen/_10sdp"
+                                    android:layout_marginTop="@dimen/_5sdp"
+                                    android:layout_marginBottom="@dimen/_5sdp"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/rounded_button_bg_white"
+                                    android:padding="10dp"
+                                    android:paddingStart="@dimen/_10sdp"
+                                    android:paddingEnd="@dimen/_10sdp"
+                                    android:text="Hungry"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorBlue" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:layout_marginStart="@dimen/_10sdp"
-                                android:layout_marginTop="@dimen/_5sdp"
-                                android:layout_marginBottom="@dimen/_5sdp"
-                                android:background="@drawable/rounded_button_bg_white"
-                                android:padding="10dp"
-                                android:text="Water"
-                                android:textColor="@color/colorBlue" />
+                                android:orientation="horizontal"
+                                android:weightSum="3">
 
+                                <TextView
+                                    android:id="@+id/button7"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/_5sdp"
+                                    android:layout_marginBottom="@dimen/_5sdp"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/rounded_button_bg_white"
+                                    android:padding="10dp"
+                                    android:text="Nightmare"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorBlue" />
+
+                                <TextView
+                                    android:id="@+id/button8"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="@dimen/_10sdp"
+                                    android:layout_marginTop="@dimen/_5sdp"
+                                    android:layout_marginBottom="@dimen/_5sdp"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/rounded_button_bg_white"
+                                    android:padding="10dp"
+                                    android:paddingStart="@dimen/_10sdp"
+                                    android:paddingEnd="@dimen/_10sdp"
+                                    android:text="Pets"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorBlue" />
+
+                                <TextView
+                                    android:id="@+id/button9"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="@dimen/_10sdp"
+                                    android:layout_marginTop="@dimen/_5sdp"
+                                    android:layout_marginBottom="@dimen/_5sdp"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/rounded_button_bg_white"
+                                    android:padding="10dp"
+                                    android:paddingStart="@dimen/_10sdp"
+                                    android:paddingEnd="@dimen/_10sdp"
+                                    android:text="Child"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorBlue" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:weightSum="3">
+
+                                <TextView
+                                    android:id="@+id/button10"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/_5sdp"
+                                    android:layout_marginBottom="@dimen/_5sdp"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/rounded_button_bg_white"
+                                    android:padding="10dp"
+                                    android:paddingStart="@dimen/_10sdp"
+                                    android:paddingEnd="@dimen/_10sdp"
+                                    android:text="Not Sure"
+                                    android:textAlignment="center"
+                                    android:textColor="@color/colorBlue" />
+
+                            </LinearLayout>
                         </LinearLayout>
 
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:orientation="horizontal">
-
-                            <Button
-                                android:id="@+id/button4"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginTop="@dimen/_5sdp"
-                                android:layout_marginBottom="@dimen/_5sdp"
-                                android:background="@drawable/rounded_button_bg_white"
-                                android:padding="10dp"
-                                android:text="Phone"
-                                android:textColor="@color/colorBlue" />
-
-                            <Button
-                                android:id="@+id/button5"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginStart="@dimen/_10sdp"
-                                android:layout_marginTop="@dimen/_5sdp"
-                                android:layout_marginBottom="@dimen/_5sdp"
-                                android:background="@drawable/rounded_button_bg_white"
-                                android:padding="10dp"
-                                android:text="Pain"
-                                android:textColor="@color/colorBlue" />
-
-                            <Button
-                                android:id="@+id/button6"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginStart="@dimen/_10sdp"
-                                android:layout_marginTop="@dimen/_5sdp"
-                                android:layout_marginBottom="@dimen/_5sdp"
-                                android:background="@drawable/rounded_button_bg_white"
-                                android:padding="10dp"
-                                android:text="Hungry"
-                                android:textColor="@color/colorBlue" />
-
-                        </LinearLayout>
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:orientation="horizontal">
-
-                            <Button
-                                android:id="@+id/button7"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginTop="@dimen/_5sdp"
-                                android:layout_marginBottom="@dimen/_5sdp"
-                                android:background="@drawable/rounded_button_bg_white"
-                                android:padding="10dp"
-                                android:text="Nightmare"
-                                android:textColor="@color/colorBlue" />
-
-                            <Button
-                                android:id="@+id/button8"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginStart="@dimen/_10sdp"
-                                android:layout_marginTop="@dimen/_5sdp"
-                                android:layout_marginBottom="@dimen/_5sdp"
-                                android:background="@drawable/rounded_button_bg_white"
-                                android:padding="10dp"
-                                android:text="Pets"
-                                android:textColor="@color/colorBlue" />
-
-                            <Button
-                                android:id="@+id/button9"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginStart="@dimen/_10sdp"
-                                android:layout_marginTop="@dimen/_5sdp"
-                                android:layout_marginBottom="@dimen/_5sdp"
-                                android:background="@drawable/rounded_button_bg_white"
-                                android:padding="10dp"
-                                android:text="Child"
-                                android:textColor="@color/colorBlue" />
-
-                        </LinearLayout>
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:orientation="horizontal">
-
-                            <Button
-                                android:id="@+id/button10"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginTop="@dimen/_5sdp"
-                                android:layout_marginBottom="@dimen/_5sdp"
-                                android:background="@drawable/rounded_button_bg_white"
-                                android:padding="10dp"
-                                android:text="Not Sure"
-                                android:textColor="@color/colorBlue" />
-
-                        </LinearLayout>
-                    </LinearLayout>
-
-                </android.support.v7.widget.CardView>
+                    </android.support.v7.widget.CardView>
 
 
-                <TextView
-                    android:id="@+id/tv_question4"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/cardView3"
-                    android:layout_margin="@dimen/_5sdp"
-                    android:text="Custom Reason:"
-                    android:textColor="@color/colorWhite" />
+                    <TextView
+                        android:id="@+id/tv_question4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/cardView3"
+                        android:layout_margin="@dimen/_5sdp"
+                        android:paddingStart="@dimen/_10sdp"
+                        android:paddingEnd="@dimen/_10sdp"
+                        android:text="Custom Reason:"
+                        android:textColor="@color/colorWhite" />
 
 
-                <EditText
-                    android:id="@+id/ans_custom_reason"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/tv_question4"
+                    <EditText
+                        android:id="@+id/ans_custom_reason"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv_question4"
 
-                    android:hint="Custom Resaon"
-                    android:background="@drawable/textfield_dark_bg"
-                    android:layout_weight="1"/>
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:layout_marginEnd="@dimen/_10sdp"
+                        android:layout_weight="1"
+                        android:background="@drawable/textfield_dark_bg"
+                        android:hint="Custom Resaon"
+                        android:paddingStart="@dimen/_10sdp"
+                        android:paddingEnd="@dimen/_10sdp" />
+                </RelativeLayout>
 
-
-
-<!--
-            </android.support.v4.widget.NestedScrollView>
--->
-
+            </ScrollView>
 
         </RelativeLayout>
 
